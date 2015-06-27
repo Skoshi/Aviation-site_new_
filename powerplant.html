@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<!--jet engine from Jeff Dahl http://en.wikipedia.org/wiki/Turbojet#/media/File:Jet_engine.svg-->
+		<!--http://commons.wikimedia.org/wiki/File:Axial_compressor.gif-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+
+		<title>POWER PLANT_Spike Final Project June 2015 DaVinci Coders javaScript</title>
+		<meta name="description" content="Glasspit, Glass Cockpit, justGauge.com">
+		<meta name="author" content="HTsao">
+        
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+     
+        <link rel="stylesheet" type="text/css" href="css/GlassPitstylesheet.css"/>
+        <link rel="stylesheet" href="resources/jquery-ui-themes-1.11.4/themes/smoothness/jquery-ui.css"/><!--jquery ui.css library from my pc, free to change name of themes-->
+        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css"/><!--jquery ui.css from online, use this as backup-->
+        <link href="css/c3.css" rel="stylesheet" type="text/css">
+        
+        <!--Flight Indicators css starts-->
+           <!-- Syntax coloration -->
+    <!-- <link rel="stylesheet" type="text/css" href="examples_data/prism/prism.css"> not needing for Spike's project-->
+    <!-- This page style -->
+    <!--<link rel="stylesheet" type="text/css" href="examples_data/style.css"> not needing for Spike's project-->
+    <!-- Flight Indicators library styles -->
+        <link rel="stylesheet" type="text/css" href="css/flightindicators.css">
+    
+         <!--Flight Indicators css ends-->
+        
+        
+        
+         <script src="resources/jssheets/raphael.2.1.0.min.js"></script><!--link to justGage .js file-->
+         <script src="resources/jssheets/justgage.1.0.1.js"></script><!--link to justGage .js file-->  
+         
+            
+         <script src="resources/jssheets/jquery-2.1.4.js"></script><!--for jQuery-->
+         <script src="resources/jssheets/jquery-ui 1.11.4.js"></script><!--for jQuery UI library on this pc-->
+         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"type="text/javascript"></script><!--for link to jQuery UI external library-->
+        
+         <script src="resources/jssheets/spikesheet05202015.js"></script><!--link to spikesheet05202015.js file. keep this syntax underneath justGauge's js links -->
+         <!-- Load d3.js and c3.js , need proper path to the library-->
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script> 
+        <script src="resources/jssheets/d3.js" charset="utf-8"></script>
+        <!-- Essential JS UI widget for gauges from syncfusion.com -->
+         <script src="resources/jssheets/ej.widgets.all-latest.min.js" type="text/javascript"></script>
+         <script src="resources/jssheets/c3.js"></script>
+    
+   <!--Fight Indicators script links see below right above Flight Indicators block--> 
+   
+   
+  <script>
+   //do not place accordian script block right above Flight indicator script block
+  $(function() {
+    $( "#accordion" ).accordion();
+  });
+  </script>
+</head>
+<body style="display: none;"><!--use inline style display: none; in order to work on firefox-->
+   
+  
+    <div id="Outer_wrapper" align="center"><!--wrap entire page-->
+    <!--set all table fixed width to prevent resizing issues. have to use inline width syntax, otherwise, it won't work-->
+    <table id="patch_table" width="1350px" align="center">
+
+     <tr><td>
+    <h3 id="fortyeight_h3">48TH FT SQ<br><a class="no_blank" href="Homeairbase.html" ><img id="imgtest" src="img/patch_1.png"/></a><br>THE SOUND OF FREEDOM</h3>
+
+  </td></tr>
+ </table>
+    
+<!--top message board table starting here-->
+ <table id="eyebrow_messageboard">
+    <tr id="eyebrow_messagerow" class="class_blue">
+        
+       <td id="ejection_signtd"><a title="EOD Warrior Foundation" href="http://www.eodwarriorfoundation.org/" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png" /></a></td>
+        <td id="eyebrow_td_1" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Homeairbase.html"><input id="airbasebut" class="eyebrowbtns" type="button" value="HOME AIR BASE"/></a></P></td>
+        <td id="eyebrow_td_2" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Hangar.html"><input id="hangarbut" class="eyebrowbtns" type="button" value="HANGAR"/></a></P></td>
+        <td id="eyebrow_td_middle"><p id="eyebrow_parap" class="eyebrow_paraclass" align="center"></p></td><!--this one needs align center syntax-->
+        <td id="eyebrow_td_3" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="powerplant.html"><input id="powerplantbut" class="eyebrowbtns" type="button" value="POWER PLANT"/></a></P></td>
+        <td id="eyebrow_td_4" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Pilotsclub.html"><input id="pilotsclubbut" class="eyebrowbtns" type="button" value="PILOTS CLUB"/></a></P></td>
+        <td id="ejection_signtd" width="60px"><a title="USAF Honoring All Fallen Members" href="https://www.odmp.org/agency/3942-united-states-air-force-security-forces-us-government" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png"/></a></td>
+    </tr>
+    
+</table><!--top message board table ends here-->
+
+<table id="flightline_paratable" class="subtitletb">
+       <tr class="subtitletb"><td class="subtitletb">
+    <p id="flightline_h3" class="subtitlep" align="center">POWER PLANT</p>
+    </td></tr>
+   </table>    
+<!--main monitor table starts here--keep width fixed px for better resize with all other tables -->     
+<table id="powerplantmain_monitortable" width="1350px" align="center" height="385px" border="1px" style="padding: 0; margin: 0px;">
+		    <tr id="powerplantmain_monitortr" class="" style="vertical-align: top; padding: 0; margin: 0px">
+		        <td id="powerplantmonitor_left1td" align="center" width="675px" height="384px" style="opacity: 0.8"><p id="powerplantmfdL1" class="mfdlclass" style="vertical-align: top"><img id="axialcompressor_img" width="670px" height="250px" style=" vertical-align: bottom;  padding: 0px; margin: 0px"  alt="Axial compressor" src="img/jet engine_Axial_compressor.gif" />
+		        <p id="byNASA" style="vertical-align: top; color: white; padding: 0; margin: 0px">Jet engine axial compressor. By NASA [Public domain], via Wikimedia Commons</p></p></td>    
+		        
+		        <td id="powerplantmonitor_right1td" align="center" width="675px" height="384px" style=" margin-bottom: 5px">
+		         
+		          <div id="accordion"  style="vertical-align: top; padding: 0px; margin:0px; width: 660px; height: 370px">
+  <h5 class="accordion1">CREW CHECK LIST</h5>
+  <div>
+    <p align="center" class="accordionpara">
+    <b>Jet Engine</b><br><br>
+    Checklists<br><br><br><br>
+    
+        
+   <font color="blue">Not suited for real operations<br>
+     For Spike's Aviation Fan Club Use Only</font> 
+    
+    </p>
+  </div>
+  <h5 class="accordion1">BEFORE ENGINE START</h5>
+  <div style="vertical-align: top;">
+    <pre class="accordionpre">
+    1. Master FUEL Switch       ON
+    
+       2. MAIN PWR BTN             CLICK
+    
+    3. MAIN PWR LIGHT           ON
+    
+    </pre>
+    
+  </div>
+  <h5 class="accordion1">STARTING ENGINE</h5>
+  <div style="vertical-align: top;">
+    <pre class="accordionpre">
+   1. ENG SWITCH                ON
+   
+                    2. Throttle                  ADVANCE TO IDLE 15%
+                    
+                    3. Engine Instruments        Check                             
+    </pre>
+    
+  </div>
+  <h5 class="accordion1">ENGINE SHUTDOWN</h5>
+  <div style="vertical-align: top;">
+    <pre class="accordionpre">
+    1. Throttle                 IDLE
+    
+   2. ENG SWITCH               OFF
+    </pre>
+    
+  </div>
+  </div>
+ </td>
+ </tr>
+</table><!--main monitor table ends here-->
+
+<!--center btn group one table starts here-->
+<table id="center_btngroup_one" align="center">
+    <tr id="center_btngroup_one_btntr" align="center" class="">
+                <td id="center_btngroup_one_btntd">
+                 <button id="mainpower_on_btn" class="" type="button" >MAIN PWR ON</button>
+                <button id="power_on_mfdL"  class="mfdpowerbtns" type="button" onclick="" align="center">L MFD POWER ON</button>
+                <button id="power_off_mfdL" class="mfdpowerbtns" type="button">L MFD POWER OFF</button>
+                <button id="power_off_mfdR" class="mfdpowerbtns" type="button" onclick="">R MFD POWER OFF</button>
+                <button id="power_on_mfdR"  class="mfdpowerbtns" type="button">R MFD POWER ON</button>
+                <button id="mainpower_off_btn" type="button">MAIN PWR OFF</button>
+                </td></tr>
+</table><!--center btn group one table ends here-->
+
+<!--lower central monitor table starts here-->
+<table id="lower_center_table" width="1350px" height="300px">
+            <tr id="lower_center_tabletr" >
+                
+<!--toggle switch html here--><td id="powerplantlower_Lefttd">
+                 <!--toggle engine sound starts below, *******how about use a new window for showing the engine?*******-->
+                 <!--use margin-top 5px to stop toggle switch from shifting up-->
+<p id="toggleengine_switch_para" align="center" style="margin-top: 5px">ENG SWITCH
+<img id="toggle" class="" align="center" onclick="toggleEnginesound()" src="img/toggle_off.png"><!--toggle engine sound on and off-->
+</p>
+<p id="powerplantphotocourtesy" align="center" style="color: white" style="padding: 0px; margin: 0px" ></p><!--replace this courtesy para later with the one that has animation .gif -->
+
+
+<audio id="mainpowerswitch_sound" src="audio/toggle_off_mainpower.mp3" type="audio/mpeg" style="visibility: hidden"></audio>
+<audio id="engine_sound" src="audio/f16_engineshotdown.mp3" type="audio/mpeg" style="visibility: hidden"></audio>   
+                            </td><!--toggle switch html ends here-->
+                
+   <td id="powerplantlower_center_monitortd" width="1196px" height="300px" align="center" style="background-color: #cccccc; opacity: 0.6; padding: 0px; margin: 0px">
+                    <p align="center" id="powerplantlower_center_para" style="padding: 0px; margin: 0px"><font color="white">
+  <!--using either object or img to call svg file. set to display non in inline style css only for page initial not load. most attributes are not supported in HTML5-->
+ <p id="jetengine_static_para" style="padding: 0px; margin: 0px">
+<img id="imgJet_engine" src="img/Jet_engine_copy.svg" style="padding: 0px; margin: 0px border: none, outline: none" />
+    </p><br>
+    
+    </p>
+    </td>
+                
+    <td id="powerplantlower_Righttd" width="78px" height="300px" align="center" style="padding: 0px; margin: 0px"><p align="center" id="powerplantlower_Rightpara" class="" style="padding: 0px; margin: 0px"> 
+    <a class="jetengine" href="" target="_blank">Jet engine</a>" by <a class="jetengine" href="" title="User:Jeff Dahl" target="_blank">Jeff Dahl</a> - self-made, vector version of <a class="jetengine" href="" class="extiw" title="en:Image:FAA-8083-3A Fig 14-1.PNG">en:Image:FAA-8083-3A Fig 14-1.PNG</a> which comes from an <a class="jetengine" rel="nofollow" href="">FAA handbook</a>. Licensed under <a title="GNU Free Documentation License" class="jetengine" href="">GFDL</a> via <a class="jetengine" href="">Wikimedia Commons</a>                      
+   </p></td>
+            </tr>
+</table><!--lower center table ends here-->
+    <span id="powerplant_turbodiv">
+    <!--turboreacteur for slider-->  <img id="turboreacteur_forsl" src="img/Turboreacteur_anime.gif" width="30px" height="80px" align="center" style="opacity: 0.2"/>
+    </span>
+
+<!--slider with gauges starting here, also see above Flight Indicators part of syntax-->
+    <div id="chart" style="padding:0px; margin-top: 0px"></div>               
+    <div id="slider" style="padding: 0px; margin: 0px">
+        <script>
+        $(function() {
+            $("#slider").slider({
+                range: true,
+                min: 0,
+                max: 100,
+                values: [0, 100],
+                slide: function(event, ui) {
+                    /*
+                      var maxv = d3.min([ui.values[1], data.length]);
+                      var minv = d3.max([ui.values[0], 0]);;
+                      x.domain([minv, maxv-1]);
+                      graph.transition().duration(750)
+                        .select(".x.axis").call(xAxis);
+                      graph.transition().duration(750)
+                        .select(".path").attr("d", line(data));
+                        */
+                       /////////spike's script testing starts here
+                       
+                        if(ui.value >0 && ui.value <=100)
+                       /*when chart loads first time, it will grab the data values from its array 0 position, see  below for pre-set array position 0 for the values (not value) property of gauge  _spike*/
+                    {chart.load({
+                        columns: [
+                            ['data', ui.values[0]]
+                        ]});
+                       
+                 ///////////  include syntax to control flight indicators                       
+                         $(document).ready(function(){
+                              
+        // Attitude update //var increment is for flight indicators
+    attitude.setRoll(30*Math.sin(increment/10));
+    attitude.setPitch(50*Math.sin(increment/20));
+    
+    // Heading update
+    heading.setHeading(increment);
+    
+    // Vario update
+    variometer.setVario(2*Math.sin(increment/10));
+    
+    // Airspeed update
+    airspeed.setAirSpeed(80+80*Math.sin(increment/10));
+    
+    // Altimeter update
+    altimeter.setAltitude(100*increment);
+    altimeter.setPressure(1200+3*Math.sin(increment/50));
+    
+    
+    increment=ui.values[0];
+     });
+    
+   
+       $("#turboreacteur_forsl").width(ui.values[0]*5); $("#turboreacteur_forsl").height(80);
+
+            }
+                      
+            }//close the slide: function
+              });
+                });
+    // can use alert to try ui's value (range number), make sure it's working
+    </script>
+   </div>
+    <script>
+//for 180 degree gauge
+/*
+var chart = c3.generate({
+    bindto: '#chart',
+    data: {
+      columns: [
+        ['data1', 30, 200, 100, 400, 150, 250],
+        ['data2', 50, 20, 10, 40, 15, 25]
+      ]
+    }
+});
+*/
+var data = [];
+var chart = c3.generate({
+    data: {
+        columns: [
+            ['data', 1] //will be used for initial range when page load
+        ],
+        type: 'gauge',
+        onclick: function(d, i) {
+            console.log("onclick", d, i);
+        },
+        onmouseover: function(d, i) {
+            console.log("onmouseover", d, i);
+        },
+        onmouseout: function(d, i) {
+            console.log("onmouseout", d, i);
+        },
+    },
+    gauge: {
+               // label: {
+              //      format: function(value, ratio) {
+             //           return value;
+             //       },
+        //   show: false // to turn off the min/max labels.
+           //     },
+           // min: 0, // 0 is default, //can handle negative min e.g. vacuum / voltage / current flow / rate of change
+          // max: 100, // 100 is default
+          // units: ' %',
+        //   width: 39 // for adjusting arc thickness
+    },
+    color: {
+        pattern: [' #c3fa61', '#fdd144', 'orange', 'red'], // the three color levels for the percentage values.
+        threshold: {
+            //            unit: 'value', // percentage is default
+            //            max: 200, // 100 is default
+            // color change when values reaches 30, 60, 90 & 100 _ spike
+            values: [30, 60, 90, 100]
+        }
+    },
+    size: {
+        height: 100
+    }
+});
+/*
+setTimeout(function() {
+    chart.load({
+        columns: [
+            ['data', 10]
+        ]
+    });
+}, 1000);
+setTimeout(function() {
+    chart.load({
+        columns: [
+            ['data', 50]
+        ]
+    });
+}, 2000);
+setTimeout(function() {
+    chart.load({
+        columns: [
+            ['data', 70]
+        ]
+    });
+}, 3000);
+setTimeout(function() {
+    chart.load({
+        columns: [
+            ['data', 0]
+        ]
+    });
+}, 4000);
+setTimeout(function() {
+    chart.load({
+        columns: [
+            ['data', 100]
+        ]
+    });
+}, 5000);
+*/
+</script>
+<!--slider with gauges ends here, also see above Flight Indicators html part of syntax. also see CSS syntax about gauges size under body tag. also see js sheet for more options-->
+     
+</div><!--Outer_wrapper ends here-->
+
+  
+
+ <!--Flight Indicators and mixed multiple Gauges html starting here-- starting here-->    
+    <div class="examples">
+        <div>
+    <div id="g1" class="powerplantg" ></div><!--justgage gauges group-->
+    <div id="g2" class="powerplantg"></div><!--justgage gauges group-->
+    <div id="g3" class="powerplantg"></div><!--justgage gauges group-->
+  
+            <span id="attitude"><div class="instrument attitude" style="height: 200px; width: 200px;"><img src="img/fi_box.svg" class="background box" alt=""><div class="roll box" style="transform: rotate(29.9245294091402deg);"><img src="img/horizon_back.svg" class="box" alt=""><div class="pitch box" style="top: 21%;"><img src="img/horizon_ball.svg" class="box" alt=""></div><img src="img/horizon_circle.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/horizon_mechanics.svg" class="box" alt=""><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+            <span id="heading"><div class="instrument heading" style="height: 200px; width: 200px;"><img src="img/fi_box.svg" class="background box" alt=""><div class="heading box" style="transform: rotate(-17735deg);"><img src="img/heading_yaw.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/heading_mechanics.svg" class="box" alt=""><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+            <span id="variometer"><div class="instrument vario" style="height: 200px; width: 200px;"><img src="img/fi_box.svg" class="background box" alt=""><img src="img/vertical_mechanics.svg" class="box" alt=""><div class="vario box" style="transform: rotate(175.5deg);"><img src="img/fi_needle.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+    
+    <div id="g4" class="powerplantg"></div><!--justgage gauges group-->
+    <div id="g5" class="powerplantg"></div><!--justgage gauges group-->
+    <div id="g6" class="powerplantg"></div><!--justgage gauges group-->  
+        
+        </div><div>
+            <span id="airspeed"><div class="instrument airspeed" style="height: 200px; width: 200px;"><img src="img/fi_box.svg" class="background box" alt="" style="display: none;"><img src="img/speed_mechanics.svg" class="box" alt=""><div class="speed box" style="transform: rotate(409.597490182081deg);"><img src="img/fi_needle.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+            <span id="altimeter"><div class="instrument altimeter" style="height: 200px; width: 200px;"><img src="img/fi_box.svg" class="background box" alt=""><div class="pressure box" style="transform: rotate(21.7729484511583deg);"><img src="img/altitude_pressure.svg" class="box" alt=""></div><img src="img/altitude_ticks.svg" class="box" alt=""><div class="needleSmall box" style="transform: rotate(6384.6deg);"><img src="img/fi_needle_small.svg" class="box" alt=""></div><div class="needle box" style="transform: rotate(216deg);"><img src="img/fi_needle.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+
+        </div>
+    </div>
+    
+ <!-- Importing the FlightIndicators library for flight indicators do not remove this script block location-->
+<script src="js/jquery.flightindicators.js"></script>
+<!--for this project do not place the following library link here: http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js. see head section for this link-->
+<!-- Let start our scripts for flight indicators do not remove this script block location-->
+<script type="text/javascript">
+// Dynamic examples, size is set under these blocks
+var attitude = $.flightIndicator('#attitude', 'attitude', {roll:50, pitch:-20, size:180, showBox : true});
+var heading = $.flightIndicator('#heading', 'heading', {heading:150, size:180,showBox:true});
+var variometer = $.flightIndicator('#variometer', 'variometer', {vario:-5, size:180,showBox:true});
+var airspeed = $.flightIndicator('#airspeed', 'airspeed', {size:190,showBox: false});
+var altimeter = $.flightIndicator('#altimeter', 'altimeter', {size:180,});
+
+// Update at 20Hz
+//var increment = 0;
+//setInterval(function() {
+    // Attitude update
+   
+   // attitude.setRoll(30*Math.sin(increment/10));
+   // attitude.setPitch(50*Math.sin(increment/20));
+    
+    // Heading update
+    //heading.setHeading(increment);
+    
+    // Vario update
+   // variometer.setVario(2*Math.sin(increment/10));
+    
+    // Airspeed update
+   // airspeed.setAirSpeed(80+80*Math.sin(increment/10));
+    
+    // Altimeter update
+   // altimeter.setAltitude(10*increment);
+   // altimeter.setPressure(1000+3*Math.sin(increment/50));
+    //increment++;
+//}, 50);
+
+
+// spike's testing, see slider part of syntax to work with Flight indicators and gauges
+var increment = 0;//see slider
+   
+</script>
+ <!--Flight Indicators ends here, also see slider part of syntax with Flight indicators-->   
+    
+      
+<!--also see CSS syntax about gauges size under body tag. also see js sheet for more options-->
+     <!--modify individual guage--->
+<!---------------------------Gauges html ends here------------------------------>
+</body>
+</html>
