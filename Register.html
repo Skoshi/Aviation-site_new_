@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<!--screen shots from F4BMS flight simulation. Please visit http://http://www.bmsforum.org-->
+		<title>Register_Spike Final Project June 2015 DaVinci Coders javaScript</title>
+		<meta name="F16 load out content=">
+		<meta name="author" content="HTsao">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link href="css/GlassPitstylesheet.css" rel="stylesheet" type="text/css" />
+		<script src="resources/jssheets/justgage.1.0.1_no alert message.js"></script><!--link to justGage .js file-->  
+       
+         <script src="resources/jssheets/jquery-2.1.4.js"></script><!--for jQuery-->
+         <script src="resources/jssheets/jquery-ui 1.11.4.js"></script><!--for jQuery UI library on this pc-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"type="text/javascript"></script><!--for link to jQuery UI external library-->
+
+         <script src="resources/jssheets/spikesheet05202015.js"></script><!--link to spikesheet05202015.js file. keep this syntax underneath justGauge's js links -->
+        <script type="text/javascript">
+        </script>
+		<style>
+		
+div.registration
+{
+    background-color: #f1f1f1;
+    width: 800px; height: 900px; margin-left: 300px; opacity: 0.9;
+}		
+		 
+form li.regform {
+list-style: none;
+margin-bottom: 5px;
+
+}
+
+form ul li label.regform{
+float: left;
+clear: left;
+width: 100px;
+text-align: right;
+margin-right: 10px;
+font-family:monospace;
+font-size:16px;
+}
+
+form ul li input, select, span.regform {
+float: left;
+margin-bottom: 10px;
+}
+
+form textarea.regform {
+float: left;
+width: 350px;
+height: 150px;
+}
+
+[type="submit"] {
+clear: left;
+margin: 20px 0 0 150px;
+font-size:18px
+}
+
+p.regform {
+margin-left: 70px;
+font-weight: bold;
+}
+			
+  
+		</style>
+		
+	</head>
+
+	<!--use inline style display: none; in order to work on firefox-->
+	<body class="registration" style="display: none;" onLoad="document.registration.userid.focus();">
+	    <div id="Outer_wrapper"><!--wrap entire page-->
+	         <table id="patch_table">
+
+     <tr><td>
+    <h3 id="fortyeight_h3">48TH FT SQ<br><img id="imgtest" src="img/patch_1.png" /><br>THE SOUND OF FREEDOM</h3>
+
+  </td></tr>
+ </table>
+        
+         </div>
+<div id="loginmenu" class="loginmenu_class">
+    <ul id="loginul_nav" style="text-align: left; margin-left: 42px">
+        <li id="btnLogin" class="loginli_class" style="margin-left: 3px"><a href="Index.html">Login</a></li>
+        <li id="btnRegister" class="loginli_class" style=""><a href="Register.html">Register</a></li>
+        <li id="btnContactus" class="loginli_class" style=""><a href="mailto:piggy8pie@comcast.net">Contact Us</a></li>
+    </ul>
+    
+</div>
+	        
+ <!--top message board table starting here-->
+    <table id="eyebrow_messageboard">
+    <tr id="eyebrow_messagerow" class="class_blue">
+        
+ <td id="ejection_signtd"><a title="EOD Warrior Foundation" href="http://www.eodwarriorfoundation.org/" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png"/></a></td>
+          <td id="eyebrow_td_1" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><input id="airbasebut" class="eyebrowbtns" type="button" value="HOME AIR BASE"/></P></td>
+          <td id="eyebrow_td_2" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><input id="hangarbut" class="eyebrowbtns" type="button" value="HANGAR"/></P></td>
+          <td id="eyebrow_td_middle"><p id="eyebrow_parap_login" class="eyebrow_paraclass"></p>New Member Register</td>
+          <td id="eyebrow_td_3" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><input id="powerplantbut" class="eyebrowbtns" type="button" value="POWER PLANT"/></P></td>
+          <td id="eyebrow_td_4" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><input id="pilotsclubbut" class="eyebrowbtns" type="button" value="PILOTS CLUB"/></P></td>
+          <td id="ejection_signtd" width="60px"><a title="USAF Honoring All Fallen Members" href="https://www.odmp.org/agency/3942-united-states-air-force-security-forces-us-government" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png" /></a></td>
+ </tr>
+    
+</table><!--top message board table ends here-->
+
+
+<!--Registration starts here-->
+<h3 class="register1">Thank You for taking the time to fill out this form</h3>
+
+<div align="center" class="registration" >
+<form name='registration' align="center" class="regform"   onSubmit="return formValidation();" style="background-color: #f1f1f1">
+<ul class="regform">
+<li class="regform" ><label class="regform" for="userid" style="margin-top: 5px">User id:</label></li>
+<li class="regform"><input class="regform" style="margin-top: 5px" type="text" name="userid" size="19" /></li>
+<li class="regform"><label class="regform" for="passid">Password:</label></li>
+<li class="regform"><input class="regform" type="password" name="passid" size="12" /></li>
+<li class="regform"><label class="regform" for="username">Name:</label></li>
+<li class="regform"><input class="regform" type="text" name="username" size="50" /></li>
+<li class="regform"><label class="regform" for="address">Address:</label></li>
+<li class="regform"><input class="regform" type="text" name="address" size="50" /></li>
+<li class="regform"><label class="regform" for="country">Country:</label></li>
+<li class="regform"><select name="country" class="regform">
+<option selected="" value="Default" class="regform">(Please select a country)</option>
+<option value="AF" class="regform">Australia</option>
+<option value="AL" class="regform">Canada</option>
+<option value="DZ" class="regform">India</option>
+<option value="AS" class="regform">Russia</option>
+<option value="AD" class="regform">USA</option>
+
+</select></li>
+<li class="regform"><label class="regform" for="zip">ZIP Code:</label></li>
+<li class="regform"><input class="regform" type="text" name="zip" /></li>
+<li class="regform"><label class="regform" for="email">Email:</label></li>
+<li class="regform"><input class="regform" type="text" name="email" size="50" /></li>
+<li class="regform"><label class="regform" id="gender">Sex:</label></li>
+<li class="regform"><input class="regform" type="radio" name="sex" value="Male" /><span class="regform">Male</span></li>
+<li class="regform"><input class="regform" type="radio" name="sex" value="Female" /><span class="regform">Female</span></li>
+<li class="regform"><label class="regform">Language:</label></li>
+<li class="regform"><input class="regform" type="checkbox" name="en" value="en" checked /><span class="regform">English</span></li>
+<li class="regform"><input class="regform" type="checkbox" name="nonen" value="noen" /><span class="regform">Non English</span></li>
+<li class="regform"><label class="regform" for="desc">About:</label></li>
+<li class="regform"><textarea class="regform" name="desc" id="desc"></textarea></li>
+<li class="regform"><input class="regform" type="submit" name="submit" value="Submit" /></li>
+</ul>
+</form>
+</div>
+   </div><!--Outer_wrapper entire page ends-->
+    
+  <script type="text/javascript">
+      
+      function formValidation()
+{
+var uid = document.registration.userid;
+var passid = document.registration.passid;
+var uname = document.registration.username;
+var uadd = document.registration.address;
+var ucountry = document.registration.country;
+var uzip = document.registration.zip;
+var uemail = document.registration.email;
+var umsex = document.registration.msex;
+var ufsex = document.registration.fsex; if(userid_validation(uid,5,12))
+{
+if(passid_validation(passid,7,12))
+{
+if(allLetter(uname))
+{
+if(alphanumeric(uadd))
+{ 
+if(countryselect(ucountry))
+{
+if(allnumeric(uzip))
+{
+if(ValidateEmail(uemail))
+{
+if(validsex(umsex,ufsex))
+{
+}
+} 
+}
+} 
+}
+}
+}
+}
+return false;
+
+} function userid_validation(uid,mx,my)
+{
+var uid_len = uid.value.length;
+if (uid_len == 0 || uid_len >= my || uid_len < mx)
+{
+alert("User Id should not be empty / length be between "+mx+" to "+my);
+uid.focus();
+return false;
+}
+return true;
+}
+function passid_validation(passid,mx,my)
+{
+var passid_len = passid.value.length;
+if (passid_len == 0 ||passid_len >= my || passid_len < mx)
+{
+alert("Password should not be empty / length be between "+mx+" to "+my);
+passid.focus();
+return false;
+}
+return true;
+}
+function allLetter(uname)
+{ 
+var letters = /^[A-Za-z]+$/;
+if(uname.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('Username must have alphabet characters only');
+uname.focus();
+return false;
+}
+}
+function alphanumeric(uadd)
+{ 
+var letters = /^[0-9a-zA-Z]+$/;
+if(uadd.value.match(letters))
+{
+return true;
+}
+else
+{
+alert('User address must have alphanumeric characters only');
+uadd.focus();
+return false;
+}
+}
+function countryselect(ucountry)
+{
+if(ucountry.value == "Default")
+{
+alert('Select your country from the list');
+ucountry.focus();
+return false;
+}
+else
+{
+return true;
+}
+}
+function allnumeric(uzip)
+{ 
+var numbers = /^[0-9]+$/;
+if(uzip.value.match(numbers))
+{
+return true;
+}
+else
+{
+alert('ZIP code must have numeric characters only');
+uzip.focus();
+return false;
+}
+}
+function ValidateEmail(uemail)
+{
+var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+if(uemail.value.match(mailformat))
+{
+return true;
+}
+else
+{
+alert("You have entered an invalid email address!");
+return false;
+}
+} function validsex(umsex,ufsex)
+{
+x=0;
+
+if(umsex.checked) 
+{
+x++;
+}
+if(ufsex.checked)
+{
+x++; 
+}
+
+if (x==2)
+{
+alert('Both Male/Female are checked');
+ufsex.checked=false
+umsex.checked=false
+umsex.focus();
+return false;
+}
+
+if(x==0)
+{
+alert('Select Male/Female');
+umsex.focus();
+return false;
+}
+else
+{
+alert('Form Succesfully Submitted');
+window.location.reload()
+return true;
+}
+}
+      
+  </script>  
+	</body>
+	
+</html>
