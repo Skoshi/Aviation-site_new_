@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+        Remove this if you use the .htaccess -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Homeairbase_Spike Final Project June 2015 DaVinci Coders javaScript</title>
+        <link href="css/GlassPitstylesheet.css" rel="stylesheet" type="text/css" />
+         <!--Flight Indicators css starts-->
+           <!-- Syntax coloration -->
+    <!-- <link rel="stylesheet" type="text/css" href="examples_data/prism/prism.css"> not needing for Spike's project-->
+    <!-- This page style -->
+    <!--<link rel="stylesheet" type="text/css" href="examples_data/style.css"> not needing for Spike's project-->
+    <!-- Flight Indicators library styles -->
+        <link rel="stylesheet" type="text/css" href="css/flightindicators.css">
+        <!--Flight Indicators css ends-->
+         
+         <!--free gauges from justGauge.com. keep this justGauge block here--->
+          <script src="resources/jssheets/justgage.1.0.1_no alert message.js"></script><!--link to justGage .js main file. use this one because modified main file to remove missing gauge alert, make sure not to include the mini one-->  
+          <script src="resources/jssheets/jquery-2.1.4.js"></script><!--for jQuery-->
+          <script src="resources/jssheets/jquery-ui 1.11.4.js"></script><!--for jQuery UI library on this pc-->
+          <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"type="text/javascript"></script><!--for link to jQuery UI external library-->
+        
+          <script src="resources/jssheets/spikesheet05202015.js"></script><!--link to spikesheet05202015.js file. keep this syntax underneath justGauge's js links -->
+   
+        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+        <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script> 
+ 
+       
+        
+    </head>
+<body style="min-width: 750px; display: none;"  onload="gmtClock()"><!--use inline style display: none; in order to work on firefox-->
+    <div id="Outer_wrapper"><!--wrap entire page-->
+<!--set all table/div fixed width to prevent resizing issues. have to use inline width syntax, otherwise, it won't work-->
+ <div id="patch_table"><!--adjust width of this div if necessary to bring logo to center-->
+    
+   <div id="patchdivcenter" align="center"> <h3 id="fortyeight_h3">48TH FT SQ<br><a class="no_blank" href="Homeairbase.html" ><img id="imgtest" src="img/patch_1.png" /></a><br>THE SOUND OF FREEDOM<br>
+        <div class="clock" align="center" style="vertical-align: top"><!--date and clock html starts here-->
+            <div id="Date"></div>
+            <ul>
+      <li id="hours"></li>
+      <li id="point">:</li>
+      <li id="min"></li>
+      <li id="point">:</li>
+      <li id="sec"></li>
+      <li id="zulu_text"> = ZULU</li>
+      <li id="clockForm"></li>       
+             </ul>
+            </div>
+   </h3></div>
+  
+<!--Homeairbase flight indicators html starting here-->    
+           <span id="homeairbasealt"><div class="instrument altimeter"><img src="img/fi_box.svg" class="background box" alt=""><div class="pressure box" style="transform: rotate(21.7729484511583deg);"><img src="img/altitude_pressure.svg" class="box" alt=""></div><img src="img/altitude_ticks.svg" class="box" alt=""><div class="needleSmall box" style="transform: rotate(6384.6deg);"><img src="img/fi_needle_small.svg" class="box" alt=""></div><div class="needle box" style="transform: rotate(216deg);"><img src="img/fi_needle.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+           <span id="homeairbaseatt"><div class="instrument attitude"><img src="img/fi_box.svg" class="background box" alt=""><div class="roll box" style="transform: rotate(29.9245294091402deg);"><img src="img/horizon_back.svg" class="box" alt=""><div class="pitch box" style="top: 21%;"><img src="img/horizon_ball.svg" class="box" alt=""></div><img src="img/horizon_circle.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/horizon_mechanics.svg" class="box" alt=""><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+           <span id="homeairbaseairspeed"><div class="instrument airspeed"><img src="img/fi_box.svg" class="background box" alt="" style="display: none;"><img src="img/speed_mechanics.svg" class="box" alt=""><div class="speed box" style="transform: rotate(409.597490182081deg);"><img src="img/fi_needle.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+           <span id="homeairbasevariometer"><div class="instrument vario" ><img src="img/fi_box.svg" class="background box" alt=""><img src="img/vertical_mechanics.svg" class="box" alt=""><div class="vario box" style="transform: rotate(175.5deg);"><img src="img/fi_needle.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+           <span id="homeairbaseheading"><div class="instrument heading"><img src="img/fi_box.svg" class="background box" alt=""><div class="heading box" style="transform: rotate(-17735deg);"><img src="img/heading_yaw.svg" class="box" alt=""></div><div class="mechanics box"><img src="img/heading_mechanics.svg" class="box" alt=""><img src="img/fi_circle.svg" class="box" alt=""></div></div></span>
+            
+           
+<!--Homeairbase flight indicators html ends here-->
+ 
+<!--top message board table starting here-->
+<table id="eyebrow_messageboard">
+    <tr id="eyebrow_messagerow" class="class_blue">
+        
+        <td id="ejection_signtd"><a title="EOD Warrior Foundation" href="http://www.eodwarriorfoundation.org/" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png"/></a></td>
+        <td id="eyebrow_td_1" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Homeairbase.html" ><input id="airbasebut" class="eyebrowbtns" type="button" value="HOME AIR BASE"/></a></P></td>
+        <td id="eyebrow_td_2" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Hangar.html"><input id="hangarbut" class="eyebrowbtns" type="button" value="HANGAR"/></a></P></td>
+        
+        <td id="eyebrow_td_middle"><p id="eyebrow_parap" class="eyebrow_paraclass"></p></td>
+        
+        <td id="eyebrow_td_3" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="powerplant.html"><input id="powerplantbut" class="eyebrowbtns" type="button" value="POWER PLANT"/></a></P></td>
+        <td id="eyebrow_td_4" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Pilotsclub.html"><input id="pilotsclubbut" class="eyebrowbtns" type="button" value="PILOTS CLUB"/></a></P></td>
+        <td id="ejection_signtd" width="60px"><a title="USAF Honoring All Fallen Members" href="https://www.odmp.org/agency/3942-united-states-air-force-security-forces-us-government" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png"/></a></td>
+   
+    </tr>
+    
+</table><!--top message board table ends here-->
+
+
+       
+
+<table id="spikeaviation_paratable" class="subtitletb"  width="1350px" height="5px" align="center"><!--do not change-->
+       <tr class="subtitletb"><td class="subtitletb">
+    <p id="flightline_h3" class="subtitlep" align="center">SPIKE'S AVIATION FAN CLUB</p>
+    
+    </td></tr>
+   </table>     
+    
+<!--main monitor table starts here--keep width fixed px for better resize with all other tables . use neon green or gray border color for this table, see css sheet -->     
+<table id="homeairbasemain_monitortable" class="class_gray"  align="center">
+        <!--if need to align tb content to top, use valign="top"-->
+        <tr id="homeairbasemain_monitortr" class="class_gray">
+<!--width of img inside span has to be wide enough to push the text to the top-->            
+<!--span test 1--><td id="homeairbasemonitor_left1td"><p id="homeairbasemfdL1" class="mfdclass"><a href="">Airplane Of The Month F20 Tigershark</a><br><br>
+                    <span id="spantest1_1" class="homebasespan">A beast who was never given a chance<img id="f20cockpitopen_1" src="img/f20_mycollection_3 resized small.png" width="322px" height="148px"/></span>
+                      <span id="spantest1_2" class="homebasespan">Faster scramble time than the F-16<img id="f20scramble_1" src="img/f20_mycollection_5 resize small.png" width="322px" height="170px"/></span>
+                         <span id="spantest1_3" class="homebasespan">Aerodynamics sleek design<img id="f20frontview_1" src="img/f20_mycollection_2 resize small.png" width="322px" height="150px"/></span>
+                         </p></td><!--span test 1 ends-->
+           
+<!--span test 2--><td id="homeairbasemonitor_left2td" width="337.5px" style="vertical-align: top"><p id="homeairbasemfdL2" class="mfdclass"><a class="no_blank" href="Hangar.html">F16 MLU Payload</a><br><br>
+                   <span id="spantest2_1" class="homebasespan">A-G<img id="f16airtog1small_1" src="img/f16airtog1.png" width="330px" height="105px"/></span>
+                    <span id="spantest2_2" class="homebasespan">A-A<img id="f16airtoa1small_1" src="img/f16airtoair1.png" width="330px" height="110px" /></span>
+                     <span id="spantest2_3" class="homebasespan">A-G<img id="f16airtog2small_2" src="img/f16airtog2.png" width="330px" height="110px" /></span>
+                    <span id="spantest2_4" class="homebasespan">A-A<img id="f16airtoa2small_2" src="img/f16airtoair2.png" width="330px" height="110px" /></span>
+                
+                    
+                </p></td><!--span test 2 ends-->
+    
+<!--span test 3--><td id="homeairbasemonitor_right2td" width="337.5px" style="vertical-align: top"><p id="homeairbasemfdR2" class="mfdclass"><a class="no_blank" href="powerplant.html"> ALL About The Engines</a><br><br>
+                <span id="spantest3_1" class="homebasespan">Jet Engine<img id="jetenginesmall_1" src="img/jet_engine small.png" width="325px" height="105px" /></span>
+                <span id="spantest3_2" class="homebasespan">Turbo Reacteur<img id="jetenginesmall_2" src="img/Turboreacteur_anime.gif" width="320px" height="110px" /></span>
+        
+                <span id="spantest3_3" class="homebasespan">Axial Compressor Animation<img id="jetengineaxialsmall_1" src="img/jet engine_Axial_compressor.gif" width="320px" height="105px" /></span>
+              
+                 
+             <span id="spantest3_4" class="homebasespan">Jet Powered VW Beetle by Ron Patrick<br><a class="linkstyle_white" href="http://www.ronpatrickstuff.com/" target="_blank"><img id="jetbeetle" src="img/VW_Fire1copy_ronpatrickstuff.com.jpg" width="320px" height="125px" /></a>
+                 
+             </span>
+           
+                </p></td><!--span test 3 ends-->
+                
+                
+                
+  
+<!--span test 4--><td id="homeairbasemonitor_right1td" width="337.5px" style="vertical-align: top"><p id="homeairbasemfdR1" class="mfdclass"><a class="no_blank" href="Pilotsclub.html">Books &amp; Videos</a><br><br>
+                
+                
+                 <span id="spantest4_1" class="homebasespan2">Movie Jet Pilot<a href="http://www.doctormacro.com/movie%20star%20pages/wayne,%20john-annex.htm" target="_blank"><img id="jw" src="img/ F-86 Jet Pilot John Wayne.gif" /></a></span><br>
+                <span id="spantest4_2" align="center" class="homebasespan3">
+                 <a href=" http://amzn.com/B008A1TXMM " target="_blank"><img class="amazon1" align="left" src="img/amazon-2-icon.png" /></a><a href=" http://www.doctormacro.com/movie%20star%20pages/wayne,%20john-annex.htm " target="_blank">Photo source: Dr. Macro's High Quality Movie Scans</a></span><br>
+                 <span id="spantest4_3" class="homebasespan2">Franz Stigler and Charlie Brown<iframe width="325" height="200" src="https://www.youtube.com/embed/_8EkmyoG83Q" frameborder="0" allowfullscreen><p>Your browser does not support iframes.</p></iframe></span><br>
+                <span id="spantest4_4" align="center" class="homebasespan3">
+                 <a href="http://amzn.com/0425255735 " target="_blank"><img class="amazon1" align="left" src="img/amazon-2-icon.png" /></a><a href="http://amzn.com/0425255735 " target="_blank">A Higher Call: A True Story of Combat and Chivalry in the War-Torn Skies of WWII</a></span>
+              
+               </p></td><!--span test 4 ends-->
+                
+            </tr>
+</table><!--main monitor table ends here-->
+
+
+
+<!--center btn group one table starts here-->
+<table id="center_btngroup_one"  align="center">
+    <tr id="center_btngroup_one_btntr" class="">
+                <td id="center_btngroup_one_btntd">
+               
+                <button id="mainpower_on_btn" class="" type="button" >MAIN PWR ON</button>
+                <button id="power_on_mfdL"  class="mfdpowerbtns" type="button" onclick="" align="center">L MFD POWER ON</button>
+                <button id="power_off_mfdL" class="mfdpowerbtns" type="button">L MFD POWER OFF</button>
+                <button id="power_off_mfdR" class="mfdpowerbtns" type="button" onclick="">R MFD POWER OFF</button>
+                <button id="power_on_mfdR"  class="mfdpowerbtns" type="button">R MFD POWER ON</button>
+                <button id="mainpower_off_btn" type="button">MAIN PWR OFF</button>
+               
+</table><!--center btn group one table ends here-->
+
+<!--lower central monitor table starts here-->
+<table id="lower_center_table"height="550px">
+            <tr id="lower_center_tabletr" class="">
+              <td id="lower_Lefttd"><p id="homebase_lfp">Links<br>
+                  <a class="linkstyle_white" title="support our troops" href="http://supportourtroops.org/" target="_blank">* Support Our Troops</a><br><br>
+                     <a class="linkstyle_white" title="falcon4 BMS" href="http://www.bmsforum.org/forum/content.php" target="_blank">* Falcon BMS: Viper Simulation</a><br><br>
+                     <a class="linkstyle_white" title="viperpits" href="http://www.viperpits.org/smf/index.php" target="_blank">* Viperpits.org: Learn to build a F-16 simulator from scratch</a><br><br>
+                     <a class="linkstyle_white" title="dcs" href="http://www.digitalcombatsimulator.com/en/" target="_blank">* Digital Combat Simulator: Leader in Military-grade Combat Simulators</a><br><br>
+                     <a  class="linkstyle_white" title="virtualTB" href="http://www.virtualthunderbirds.com/" target="_blank">* Virtual Thunderbirds: Virtual Equivalent of The USAF Thunderbirds</a><br><br>
+                     <a class="linkstyle_white" title="virtualBlueA" href="http://virtualblueangels.com/" target="_blank">* Virtual Blue Angels: Virtual Equivalent of The US Navy Blue Angels</a><br><br>
+                     <a class="linkstyle_white" title="virtual56th" href="http://www.thunderboltsvfw.com/forum/content.php?5-home_1" target="_blank">* 56th Virtual Fighter Wing</a><br>
+                  <a class="linkstyle_white" title="wingsoverther" href="http://wingsmuseum.org/?gclid=CPbQvs6R_8UCFQuMaQodOXwApQ" target="_blank">* Wings Over The Rockies</a><br><br>
+                  <a class="linkstyle_white" title="f16.net" href="http://www.f-16.net/" target="_blank">* F-16.net</a>
+                  <a class="linkstyle_white" href="http://feeds.feedburner.com/F-16FightingFalconNews" target="_blank"><img src="http://www.f-16.net/graphics/rss/f-16_rss_feed.gif" /></a>
+                 <a class="linkstyle_white" href="http://feeds.feedburner.com/F-22RaptorNews" target="_blank"><img src="http://www.f-16.net/graphics/rss/f-22_rss_feed.gif" /></a>
+                 <a class="linkstyle_white" href="http://feeds.feedburner.com/F-35JSFNews" target="_blank"><img src="http://www.f-16.net/graphics/rss/f-35_rss_feed.gif" /></a>
+                 
+              </p></td>
+                  
+                  
+     <!--slide show---> <td id="lower_center_monitortd" width="80%" align="center" style="padding: 0px; margin: 0px; vertical-align: top">
+                   <p id="homeairbase_lowercentermonitorpara" style="vertical-align:top; padding: 0px; margin: 0px"></p>
+                 
+                 <ul style="padding: 0px; margin: none">
+            <li align="center"><img class="slideshowimg"  src="img/img1.JPG" /></a></li><!--make sure it's wide enough to show arrow buttons-->
+            <li align="center"><img class="slideshowimg" src="img/img2.JPG" /></li>
+            <li align="center"><img class="slideshowimg" src="img/img3.JPG" /></li>
+            <li align="center"><img class="slideshowimg" src="img/f16bms1.png" /></li>
+             <li align="center"><img class="slideshowimg" src="img/f16bms2.png" /></li>
+            <li align="center"><img class="slideshowimg" src="img/f16bms3.png" /></li>
+            <li align="center"><img class="slideshowimg" src="img/f16bms4.png" /></li>
+             <li align="center"><img class="slideshowimg" src="img/f16bms5.png"/></li>
+            <li align="center"><img class="slideshowimg" src="img/f16bms6.png" /></li>
+            <li align="center"><img class="slideshowimg" src="img/f16bms7.png" /></li>
+            <li align="center"><img class="slideshowimg" src="img/F9F_1.png" /></li>
+            <li align="center"><img class="slideshowimg" src="img/F9F_2.png" /></li>
+     
+     
+      </ul>
+      <span class="button prevButton"></span>
+      <span class="button nextButton"></span>
+             </p>     
+                </td>
+                
+        <td id="lower_Righttd"><p idid="hblowerrightp">
+                <a href="img/img1.JPG" target="_blank"><img class="homebaselowerright" src="img/img1.JPG"/><a>
+                  <a href="img/img2.JPG" target="_blank"><img class="homebaselowerright" src="img/img2.JPG" /><a>
+                  <a href="img/img3.JPG" target="_blank"><img class="homebaselowerright" src="img/img3.JPG" /><a>
+                  <a href="img/f16bms1.png" target="_blank"><img class="homebaselowerright" src="img/f16bms1.png" /><a>
+                  <a href="img/f16bms2.png" target="_blank"><img class="homebaselowerright" src="img/f16bms2.png" /><a>
+                 <a href="img/f16bms3.png" target="_blank"><img class="homebaselowerright" src="img/f16bms3.png" /><a>
+                <a href="img/f16bms4.png" target="_blank"> <img class="homebaselowerright" src="img/f16bms4.png" /><a>
+                 <a href="img/f16bms5.png" target="_blank"><img class="homebaselowerright" src="img/f16bms5.png" /><a>
+               <a href="img/f16bms6.png" target="_blank"> <img class="homebaselowerright" src="img/f16bms6.png" /><a>
+               <a href="img/f16bms7.png" target="_blank"> <img class="homebaselowerright" src="img/f16bms7.png" /><a>
+               <a href="img/F9F_1.png" target="_blank"><img class="homebaselowerright" src="img/F9F_1.png" /><a>
+               <a href="img/F9F_2.png" target="_blank"><img class="homebaselowerright" src="img/F9F_2.png" /><a>
+                     
+               </p></td>
+            </tr>
+</table><!--lower center table ends here-->
+
+      
+</div><!--Outer_wrapper entire page ends-->
+
+ 
+   
+ <!-- Importing the FlightIndicators library for flight indicators do not remove this script block location-->
+<script src="js/jquery.flightindicators.js"></script>
+<!--for this project do not place the following library link here: http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js. see head section for this link-->
+<!-- Let start our scripts for flight indicators do not remove this script block location-->
+<script type="text/javascript">
+// Dynamic examples, size is set under these blocks
+var attitude2 = $.flightIndicator('#homeairbaseatt', 'attitude', {roll:50, pitch:-20, size:80, showBox : true});//homeairbaseatt is the span id
+var heading2 = $.flightIndicator('#homeairbaseheading', 'heading', {heading:150, size:80,showBox:true});
+var variometer2 = $.flightIndicator('#homeairbasevariometer', 'variometer', {vario:-5, size:80,showBox:true});
+var airspeed2 = $.flightIndicator('#homeairbaseairspeed', 'airspeed', {size:80,showBox: true});
+var altimeter2 = $.flightIndicator('#homeairbasealt', 'altimeter', {size:80,});
+
+// Update at 20Hz
+var increment = 0;
+setInterval(function() {
+    // Attitude update
+   //attitude2 is the var per above
+    attitude2.setRoll(30*Math.sin(increment/10));
+    attitude2.setPitch(50*Math.sin(increment/20));
+    
+    // Heading update
+    heading2.setHeading(increment);
+    
+    // Vario update
+    variometer2.setVario(2*Math.sin(increment/10));
+    
+    // Airspeed update
+    airspeed2.setAirSpeed(80+80*Math.sin(increment/10));
+    
+    // Altimeter update
+    altimeter2.setAltitude(20*increment);//altimeter2 is the var per above
+    altimeter2.setPressure(1000+3*Math.sin(increment/50));
+    increment++;
+}, 20);
+</script>
+ <!--Flight Indicators ends here, also see slider part of syntax with Flight indicators-->   
+    </body>
+</html>
