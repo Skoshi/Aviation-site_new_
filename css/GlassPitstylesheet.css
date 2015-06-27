@@ -1,0 +1,1251 @@
+/*click the refresh button (the two yellow arrows) under Aptana Preview window in order to see the changes*/
+
+/*for body, need text align to center in order to bring gauges to the center*/
+
+html{
+    
+    background-color: #000000;
+}
+
+
+ body{
+     /*width: 1400px;*/
+     width: 100%;
+     background-color: black;
+   /*moved display: none; to inline Style in order to work with firefox*/
+    background-image: url("../img/blackbird_sr_71-wallpaper-1366x768.jpg");
+    
+    background-repeat: no-repeat;
+    background-position: center; fixed;
+ 
+     text-align: center;
+     font-family: sans-serif;
+  }
+
+/*body for login and forms*/  
+body.loginform
+{
+     
+     width: 1400px; height: 1200px;
+     background-color: black;
+    /*moved display: none; to inline Style in order to work with firefox*/
+    /*background-image: url("../img/f18_fighter-plane-308321.jpg");*/
+    background-image: url("../img/Area 88 Shin_tuned.png");
+  
+    /*background-image: url("../img/Area 88 Shin.png");*/
+    background-repeat: no-repeat;
+    background-position: center; fixed;
+  
+     font-family: sans-serif;
+  
+}
+
+/*body for registration form*/
+body.registration
+{
+    background-color: black;
+     /*moved display: none; to inline Style in order to work with firefox*/
+     background-image: url("../img/mcdonnell_douglas_f_4_phantom_ii-wallpaper-1680x1050.jpg");
+    /*background-image: url("../img/AREA_88_vol_01.jpg");*/
+    background-repeat: no-repeat;
+    background-position: center;
+     text-align: center;
+     font-family: sans-serif;
+}
+
+/*for 48th SQ*/
+#fortyeight_h3
+{
+    margin-left: auto;
+    margin-right: auto;
+    color: #fed230;
+}
+
+  
+ /*----for Pilot's club page with Tubular starts here----*/
+ body.pclub { background: #333; }
+ 
+ /*
+    ----------------------------
+    LAYOUT
+    ____________________________
+*/
+
+/*#wrapper { width: 960px; margin: 0 auto; padding: 48px 0 72px; }*/
+#wrapper { width: 1350px; margin: 0 auto; padding: 48px 0 72px; }
+#main { width: 640px; float: left; }
+#main > p, #main > div { margin-left: 7px; }
+#sidebar { width: 280px; float: right; }
+#sidebar ol { margin: 12px 0 12px 22px; }
+/*
+    ----------------------------
+    PAGE/SECTION SPECIFIC
+    ____________________________
+*/
+
+
+#video-controls { width: 333px; }
+#video-controls a { color: #ddd; text-decoration: underline; }
+
+
+/*
+    ----------------------------
+    UTILITY CLASSES
+    ____________________________
+*/
+
+
+.black-15 { background: url(../media/black-15-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-35 { background: url(../media/black-35-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-50 { background: url(../media/black-50-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-65 { background: url(../media/black-65-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+.black-65-2 { background: url(../media/black-65-trans.png); color: #fff; padding: 4px 12px; margin: 0px 0; }/*for the top clip controler*/
+.black-85 { background: url(../media/black-85-trans.png); color: #fff; padding: 4px 12px; margin: 24px 0; }
+
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+ 
+ /*---for Pilot's club page with Tubular ends here---*/
+   
+ 
+ /*standard 1em = 16px*/ 
+ p{
+     font-size: 0.8em;
+ }
+ 
+ p.subtitlep{
+     
+      padding: 0px; margin: 0px;
+      color: #fed230;
+      font-size: 1em;
+ }
+ 
+/*for Pilot's club book shelves para*/   
+ p.bookstyle{
+     color: white;
+     font-size: 1em;
+     text-align: left; text-indent: 8px; padding: 0; margin: 0;text-wrap: normal;
+   
+ }
+ 
+    /*set para inside the table padding and margin to 0 to prevent pushes */
+ p.mfdclass{
+     
+     padding: 0px;
+     margin: 0px;
+ }
+ 
+  pre.accordionpre{
+     font-size: 1em;
+ }       
+  
+ 
+ p.accordionpara{
+     font-size: 0.8em;
+ }
+ 
+  
+     
+ p.cubepara{
+ /*for para on cube*/
+ color: white;
+ font-family: monospace;
+ font-size: 1px;
+ 
+     
+ }
+    
+    
+    h3.register1
+    {
+        color: #439CBD;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+     
+ 
+ a{
+     color: #439cbd;
+ /*remove link underline*/
+     text-decoration: none;
+    
+ }
+ 
+ a.jetengine
+ {
+     cursor: default; padding: 0px; margin: 0px; text-wrap: none;
+ }
+ 
+ 
+ 
+ 
+ a.linkstyle:link{
+    /*unvisited link*/ 
+     color: #0921ea;
+     cursor: pointer;
+ }
+ a.linkstyle:visited{
+    /*visited link*/ 
+     color: purple;
+ }
+ 
+ 
+ a.linkstyle_white:link{
+    /*unvisited link*/ 
+     color: white;
+     cursor: pointer;
+ }
+ a.linkstyle_white:visited{
+    /*visited link*/ 
+     color: white;
+   
+ }
+ 
+  /*for SQ img*/
+ #imgtest
+ {
+     width:100px; height: 110px;  
+     margin-right: auto;
+     margin-left: auto;
+ }
+
+img.homebaselowerright{
+/*width to 140px for Safari to show*/
+    width: 140px; height: 47px; vertical-align: middle;
+}
+
+ /*for imgs on cube*/
+ img.cubeclass{
+     opacity: 0.8;
+      width: 490px;
+       height: 410px;
+       float: left;  margin-top: 30px
+ }
+ 
+    /*for small amazon, youtube, fb, twitter icons*/
+   img.smallicons
+   {
+       width: 28px; height:28px;  vertical-align: top;
+   }
+ 
+ img.amazon1
+ {
+     width:20px; height: 20px;
+ }
+ 
+ 
+ #imgJet_engine
+ {
+     width: 1020px; height: 250px;
+ }
+ 
+ 
+ 
+ /*iframe for Pilot's club*/
+iframe.pilotsclub
+{
+    width:300px;  height: 200px; border: 0px;
+}
+ 
+ 
+ 
+ iframe.cubeclass{
+ /*for clips on cube*/
+      width: 490px;
+       height: 468px;
+       float: left;
+     
+ }
+ 
+  
+   #ol1 {
+      
+      list-style-position: outside;
+      margin-left: 100px;
+  }
+  
+  .ol1class{
+       margin-right: 150px;
+      
+  }
+  
+/*Homebase span*/
+span.homebasespan
+{
+    display: inline-block;
+    width: 335px; border: none; background-color: black; border-radius: 3px; cursor:pointer; margin: 0px;
+}
+ 
+
+ 
+span.homebasespan2
+{
+/*need set height for FF and Safari to show img*/
+    display: inline-block; width: 325px;  height: 200px; background-color: black; border-radius: 3px; cursor:pointer;
+    margin: auto; text-wrap: none; text-align: center;
+display:inline; /*for IE*/
+} 
+ 
+/*John Wayne*/    
+ #jw{
+ width: 320px; height: 198px;
+    }
+    
+span.homebasespan3
+{
+    width:320px;  height:25px;
+    text-wrap: none; text-align: left;
+}
+    
+/*ejection sign opacity starting here*/ 
+ #ejection_sign_img{
+     width: 55px;
+      height: 48px;
+     opacity: 0.3;
+ filter: alpha (opacity=30); /*this line is for IE8 and earlier*/
+     
+ }
+ 
+  #ejection_sign_img:hover{
+     opacity: 1.0;
+ filter: alpha (opacity=100); /*this line is for IE8 and earlier*/
+ }
+
+/*ejection sign opacity ends here*/ 
+
+
+
+ 
+/* Date Clock css starting here*/
+/*<!--http://www.sitepoint.com/create-jquery-digital-clock-jquery4u/*/
+/*<!--http://www.sitepoint.com/10-cool-jquery-clock-tutorials-analog-digital/-->*/
+  
+  /* If you want you can use font-face */
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('BebasNeue-webfont.eot');
+    src: url('BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('BebasNeue-webfont.woff') format('woff'),
+         url('BebasNeue-webfont.ttf') format('truetype'),
+         url('BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.homeairbase_lowercentermonitorpara {
+    width: 150px;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+.clock {
+    width: 300px;
+    margin: 0 auto;
+    padding: 0px;
+    border: 1px solid black;
+    color: #fff;
+   
+}
+
+#Date {
+    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 0 5px #00c6ff;
+  
+}
+
+ul {
+    width: 300px;
+    margin: 0 auto;
+    padding: 0px;
+    list-style: none;
+    text-align: center;
+   
+ 
+  
+     
+}
+
+ul li {
+    display: inline;
+    font-size: 15px;
+    text-align: center;
+    font-family: 'BebasNeueRegular', Arial, Helvetica, sans-serif;
+    text-shadow: 0 0 5px #00c6ff;
+}
+
+li.loginli_class{
+    
+    font-size: 0.8em;
+    margin-left: 10px;
+}
+
+div.loginmenu_class{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+    color: white;
+    list-style: none;
+    text-decoration: none;
+   cursor: pointer;
+   float: left;
+    
+}
+
+/*div for Pilot's club shelves*/
+div.pilotsshelfgray{
+    height: 150px;  padding: 0; margin: 0; opacity: 0.93; /*background-color: gray;*/
+}
+
+div.pilotsshelforange{
+    height: 150px;  padding: 0; margin: 0; opacity: 0.93; /*background-color: orange;*/
+}
+
+
+div.pilotsshelflightblue{
+    height: 150px;  padding: 0; margin: 0; opacity: 0.93; /*background-color: #4bb6f8;*/
+    
+}
+
+/*div for Pilot's club books ends*/
+
+
+
+
+/*for now, disable the blinking points.*/
+/*#point {
+    position: relative;
+    -moz-animation: mymove 1s ease infinite;
+    -webkit-animation: mymove 1s ease infinite;
+    padding-left: 10px;
+    padding-right: 10px;
+}*/
+
+/* Simple Animation */
+@-webkit-keyframes mymove {
+    0% {opacity: 1.0;
+    text-shadow: 0 0 20px #00c6ff;
+}
+
+50% {
+    opacity: 0;
+    text-shadow: none;
+}
+
+100% {
+    opacity: 1.0;
+    text-shadow: 0 0 20px #00c6ff;
+}   
+}
+
+@-moz-keyframes mymove {
+    0% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    }
+
+    50% {
+        opacity: 0;
+        text-shadow: none;
+    }
+
+    100% {
+        opacity: 1.0;
+        text-shadow: 0 0 20px #00c6ff;
+    };
+}
+/**************Date Clock css ends here*/
+ 
+/*make table outer border color black, only showing tr outter border color*/    
+    table{
+            border: 0px solid black;
+            table-layout: fixed;
+         
+           overflow: hidden;
+           text-overflow:ellipsis;
+        }
+        
+        td.loadout{
+        /*for load out table*/
+    color: #84f924;
+    font-size: 0.9em;
+    font-family: monospace;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: top;
+            
+        }
+        
+        td.loadout2
+        {
+    width: 128px;        
+    color: #84f924;
+    font-size: 0.9em;
+    font-family: monospace;
+    padding: 0px;
+    margin: 0px;
+    vertical-align: top;
+        }
+        
+        #grossnumber{font-family: monospace; font-size: 14px; color:#2b8ffa;}
+        
+        #loadout_showroom{margin-top: -30px; margin-bottom: 0px; border-color: gray;  width: 625px; height:349px;}
+        
+        
+        td.fueldata{
+        /*for fuel data*/
+            color: white;
+    font-size: 0.9em;
+    font-family: monospace;
+    padding: 0px;
+    margin: 0px;
+            
+        }
+        
+        
+    /*patch table*/
+   
+   #patch_table
+   {
+      margin-left: auto;
+      margin-right:auto;
+      width: 100%; text-align: center;
+   }
+        
+        
+        
+      /*eyebrowmessageboard*/  
+      #eyebrow_messageboard 
+      {
+          width:1350px; height: 40px; border: none;
+          margin-left: auto;
+          margin-right: auto;
+      } 
+        
+        #ejection_signtd
+        {
+            width: 60px;
+        }
+        
+        #eyebrow_td_middle
+        {
+            width: 700px; color: #fed230; font-size: 1em;
+        }
+        
+        tr, td.subtitletb{
+        /*do not change, keep 1350px here*/
+            width: 1350px;
+            border-collapse: collapse;
+             padding: 0px; margin: 0px;
+             margin-left: auto;
+             margin-right: auto;
+       }
+        
+    /*home base main monitortable*/    
+        #homeairbasemain_monitortable
+        {
+            width: 1350px; height: 575px; 
+             border: none;   min-width: 1350; max-width: 1350; min-height: 570; max-height: 570; table-layout: fixed; margin-left: auto; margin-right: auto;
+        }
+        
+        
+         #homeairbasemonitor_left1td{width: 337.5px;  vertical-align: top;}
+         
+        
+        
+        
+        
+    /*Home base center button group*/    
+        #center_btngroup_one
+        {
+            width: 1350px;
+            height: 45px; 
+             background-color: #fdd144; 
+             opacity: 0.8;
+        }
+        
+       
+        
+        
+        
+    
+      /*Home base lower left*/    
+        #lower_Lefttd
+        
+         {
+            width: 10%; height: 550px;  vertical-align: top;
+            padding: 0px; border: none;
+        }
+        
+        #homebase_lfp
+        {
+             color: #439cbd; padding: 0px; margin: 0px;
+        }
+        
+        
+         /*Home base lower center*/   
+       
+       #lower_center_table
+       {
+           width: 1350px;
+           margin-left: auto;
+           margin-right: auto;
+           border: 0px;
+           padding: 0px;
+       }
+        
+        #lower_center_tabletr
+        {
+            width: 1350px;
+           margin-left: auto;
+           margin-right: auto;
+           border: 0px;
+           padding: 0px;
+        }
+        
+        
+         /*Home base lower right*/
+        #lower_Righttd
+        {
+            width: 10%; height: 550px;  vertical-align: top;
+            padding: 0px; border: none;
+        }
+        
+        /*Home base lower right para*/
+       #hblowerrightp{color: white; padding: 0px; margin: 0px;}
+        
+        
+        #center_btngroup_one_btntr
+        {
+           background-color: #fdd144;
+           margin-left: auto;
+           margin-right: auto;
+        }
+        
+        
+        #center_btngroup_one_btntd
+        {
+            width: 1350px;
+        }
+ 
+    /*Hangar stuff starts*/
+   td.color1{width: 50px; height: 50px;font-size: 10px; color: white; margin-left: auto; margin-right: auto; table-layout:fixed; overflow: hidden; word-wrap: break-word;}
+           
+            #r1_station6 {width:70px; }
+            #r1_station5 {width:173px;}
+            #r1_station4 {width:70px; }
+           
+            #r2_station6 {width:95px; }
+            #r2_station5 {width:170px;}
+            #r2_station4 {width:95px; }
+            
+            #r3_station6 {width:95px; }
+            #r3_station5 {width:170px;}
+            #r3_station4 {width:95px; }
+            
+            #r4_station6 {width:95px; }
+            #r4_station5 {width:170px;}
+            #r4_station4 {width:95px; }
+            
+            #r5_station6 {width:95px; }
+            #r5_station5 {width:170px;}
+            #r5_station4 {width:95px; }
+           
+           #fuel_table{table-layout: fixed; margin-bottom: 10px; border-color: gray;  width: 800px; height: 30px; border: 0px;}
+            
+            /* hangar image raised effect starts*/
+             #loadoutpic {
+   
+            -webkit-box-shadow: 0px 2px 30px black;
+            -moz-box-shadow: 0px 2px 30px black;
+            box-shadow: 0px 2px 30px black;
+    }
+     /* hangar image raised effect ends*/
+    #hangarp
+    {margin-left: auto; margin-right: auto; padding: 0px; margin: 0px; color: #fed230; font-size: 1.2em;}
+    
+   p.loadout{
+ /*for F16 loadout table*/
+color: #84f924;
+font-size: 1.2em;
+font-family: monospace;
+padding: 0px;
+margin: 0px;
+margin-left: auto; margin-right: auto;
+     
+ } 
+ 
+ #loadout_firstrowbtns{ width: 614px; height: 35px; margin-top: 0px; margin-bottom: 0px; border-color: gray;}
+ td.loadoutbtns{margin-left: auto; margin-right: auto;}
+ 
+ 
+ 
+ #weightdisplay{table-layout: fixed; margin-top: -5px; margin-bottom: 0px; width: 614px; height: 35px; border:0px;}
+ #load_table_h3{color: #84f924; margin-top: -20px; font-family: monospace;}
+ 
+ table.loadoutdatashow{table-layout: fixed; margin-top:0px; margin-bottom: 10px; width: 614px; height: 50px; border: 0px;}
+ 
+ 
+ 
+    /*Hangar stuff ends*/  
+        
+    /*Powerplant lowerleft td*/
+        #powerplantlower_Lefttd
+        {
+            width: 78px; height: 300px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0px;
+        }
+        
+    /*Powerplant toggle switch para*/
+        #toggleengine_switch_para
+        {
+           background-color: #fed230; padding: 0px;
+           margin-top: 5px; 
+        }    
+        
+    /*Powerplant img toggle*/    
+        #toggle {margin-left: auto; margin-right: auto; padding: 0px; margin: 0px;}
+        
+        
+    /*td for Pilot's club youtube*/
+        td.pilotsclubyt
+        {
+            width: 337.5px; vertical-align: top;
+        }
+       
+        
+     
+        
+    /*pilot's club lower left td*/   
+    
+    #pclublower_Lefttd
+    {
+        width: 10%;
+        vertical-align: top;
+    } 
+        
+/**/        
+        .class_gray{
+            
+            border: 0px solid gray;
+        }
+        
+        
+        .class_neonGreen{
+            border: 0px solid #c3fa61;
+        }
+        
+         tr.class_blue{
+            border: 0px solid #5e99d5;
+            height: 40px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #monitor_lowercenter{
+            border: 0px solid #5e99d5;
+        }
+        
+        td.greybackgroundc{
+           width: 123px;
+           border: 0px;
+        }
+        
+        .noborder{
+            
+            border:none;
+        }
+        
+         
+        h5.accordion1{
+            background: #fca136;
+            /* background: #fda02f;*/
+            opacity: 1;
+            color: white;
+         
+        }
+        
+    
+
+/*input class*********/        
+        input.eyebrowbtns{
+            width: 100px;
+            height: 38px;
+            
+            white-space: normal;
+            
+    background: #3e9cbf; /*colour of the button*/
+    padding: 3px 7px 5px; /*apadding inside the button*/
+    border:1px solid #3e9cbf; /*required otherwise the default border for the browser will show*/
+    cursor:pointer; /*forces cursor to change to a hand when button is hovered*/
+    
+    font-size:14px;/*style text*/
+    font-family:Oswald, sans-serif; /*Oswald is available from http://www.google.com/webfonts/specimen/Oswald*/
+    letter-spacing:1px;
+    text-shadow: 0 -1px 0px rgba(0, 0, 0, 0.3); /*give text shadow - doesn't appear in Opera 12.02 or earlier*/
+    color: #fff;/*text color*/
+    /*use box-shadow to give button some depth*/
+    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 5px 0px 0px #205c73, 0px 10px 5px #999;
+    /*make corners a small curve*/
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 5px;
+    }
+   
+    input.eyebrowbtns:hover, input.eyebrowbtns:focus {
+    color:#dfe7ea;
+    /*reduce size of shadow to give it a pushed effect*/
+    -webkit-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    -moz-box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+    box-shadow: inset 0px 1px 0px #3e9cbf, 0px 2px 0px 0px #205c73, 0px 2px 5px #999;
+            
+        }
+        
+ /************ button class*/
+button.mfdpowerbtns{
+    background: gray;
+    color: #fff;
+    cursor: pointer;
+    
+}       
+        
+        
+        
+/*eyebrow paragraph starts here. 0 margin to prevent pushing table row*/        
+        p.eyebrow_paraclass{
+           
+           font-family: sans-serif;
+            margin-top: 0px;
+            margin-bottom: 0px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 20px;
+           background:#ffd300;
+           color: black; /*text color*/
+    /*multiple shadows if necessary*/
+    text-shadow:0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+        }
+/*eyebrow paragraph ends here*/  
+
+
+  /*Gauges CSS starting here*/
+     
+      #g1, #g2, #g3, #g4, #g5,  #g6
+       {
+        width:150px; height:90px;
+        display: inline-block;
+        margin: 0.1em;
+        background-color: #fdd144;        
+       }
+       
+   /*create a class for gauge g1-g6 groups for other more scale options. use inline-block to display gauges horizontally*/
+       #g1.gaugeoption1,#g2.gaugeoption1,#g3.gaugeoption1,#g4.gaugeoption1,#g5.gaugeoption1,#g6.gaugeoption1
+       {
+           display: inline-block;
+           width: 108px; height: 50px;  margin: 0px;
+        
+           
+           padding: 0px;
+           
+           background-color: black; 
+           
+       }
+       
+    /*create a class for gauge g1-g6 groups used in Powerplant site*/
+   
+      #g1.powerplantg,#g2.powerplantg,#g3.powerplantg,#g4.powerplantg,#g5.powerplantg,#g6.powerplantg
+      {
+          
+          display: inline-block;
+           width: 120px; height: 100px;  margin: 0px;
+           
+           padding: 0px;
+           
+           background-color:#fdd144;
+      } 
+       
+  /*Gauges CSS ends here. do not use // outside of this comments, otherwise the below whatever syntax won't work*/
+ 
+
+ 
+/*Main Power On btn static starts here*/   
+    #mainpower_on_btn{
+    width: 100px;
+    height: 50px;
+   cursor:pointer; /*forces the cursor and change it to a hand when the button is hovered*/
+    padding:10px 10px; /*add padding to the inside of the button frame*/
+    background:#45484f; /*colour of the button*/
+    border:0px solid #33842a; /*required otherwise the default border of browser will show*/
+    /*give button curved corners, alter the size as required*/
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /*give button a drop shadow*/
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    color:#ffffff;/*style text*/
+    font-size:15px;
+    }
+    /***style hover and focus***/
+    #mainpower_on_btn:hover, #mainpower_on_btn:focus{
+    background-color :#399630; /*make background a bit darker*/
+    /*reduce drop shadow size to procude a pushed button effect*/
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+    }
+/*Main Power On btn static ends here*/ 
+
+
+
+/*Main Power On btn neon starts here*/
+.mainpower_on_btnclass
+{
+     width: 100px;
+    height: 50px;
+   cursor:pointer; /*forces the cursor and change it to a hand when the button is hovered*/
+    padding:10px 10px; /*add padding to the inside of the button frame*/
+    background:#45484f; /*colour of the button*/
+    border:0px solid #33842a; /*required otherwise the default border of browser will show*/
+    /*give button curved corners, alter the size as required*/
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /*give button a drop shadow*/
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    color:#ffffff;/*style text*/
+    font-size:15px;
+    font-weight: 900;
+    background:#fff9dd;
+    color:#fff9dd;
+    text-shadow:0 0 10px #00d3ff, 0 0 5px #00d3ff, 0 0 30px #00d3ff, 0 0 40px #00d3ff, 0 0 50px #00d3ff, 0 0 60px #00d3ff, 0 0 10px #00d3ff;
+}
+/*Main Power on btn neon ends here*/
+
+
+/*Main Power Off btn static starts here*/   
+    #mainpower_off_btn{
+    
+     width: 100px;
+    height: 50px;
+    cursor:pointer; /*forces the cursor and change it to a hand when the button is hovered*/
+    padding:10px 10px; /*add padding to the inside of the button frame*/
+    background:#45484f; /* colour of the button*/
+    border:0px solid #33842a; /*required otherwise the default border of browser will show*/
+    /*give button curved corners, alter the size as required*/
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    /*give button a drop shadow*/
+    -webkit-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 4px rgba(0,0,0, .75);
+    box-shadow: 0 0 4px rgba(0,0,0, .75);
+    color:#ffffff;/*style text*/
+    font-size:15px;
+    }
+    /***style hover and focus***/
+    #mainpower_off_btn:hover, #mainpower_off_btn:focus{
+    background-color :red; /*make background a bit darker*/
+    /*reduce drop shadow size to procude a pushed button effect*/
+    -webkit-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    -moz-box-shadow: 0 0 1px rgba(0,0,0, .75);
+    box-shadow: 0 0 1px rgba(0,0,0, .75);
+    }
+/*Main Power Off btn static ends here*/ 
+
+/*slide show css starting here*/
+#homeairbase_lowercentermonitorpara{
+}
+
+#homeairbase_lowercentermonitorpara li:first-child{
+    display:list-item;
+    position:absolute;
+}
+
+#homeairbase_lowercentermonitorpara li{
+    position:absolute;
+    display:none;
+}
+
+
+#lower_center_monitortd .prevButton{
+height:72px;/*adjust height will make button move when hover*/
+    width:68px;
+position:relative;/*prev button won't move when resize screen*/
+    background:url("../img/buttons.png") no-repeat;
+    opacity: 0.2;
+  top:170%;/*distance from top of the page*/
+margin-left:245px;/*for test 2, re-position the prev arrow button towards to more right */
+    position:absolute;
+    z-index:2000;
+    background-position:left top;
+    left:0
+}
+
+#lower_center_monitortd .prevButton:hover{ background-position:left bottom;left:0;}
+
+
+#lower_center_monitortd .nextButton{
+    height:72px;
+    width:68px;
+position:absolute;/*next btn will move when resize screen, need this*/
+    background:url("../img/buttons.png") no-repeat;
+    opacity: 0.2;
+    top:170%;
+    margin-right:260px;/*for test 2, re-position the next arrow button towards to more left */
+    cursor:pointer;
+    z-index:2000;
+    background-position:right top;
+    right:0
+}
+
+#lower_center_monitortd .nextButton:hover{background-position:right bottom;right:0;}
+
+#lower_center_monitortd ul{
+    width:1079px;
+    height:550px;
+    list-style:none outside none;
+  
+    
+    overflow:hidden;
+}
+
+#lower_center_monitortd li:first-child{
+    display:list-item;
+    position:absolute;
+   
+}
+
+#lower_center_monitortd li{
+    position:absolute;
+    display:none;
+   
+}
+
+img.slideshowimg
+{
+    width:1070px; height: 550px; vertical-align: middle; border: 0;
+}
+/*slide show css ends here*/
+
+
+/*3D cubes for Hangar css starting here. css named touch*/
+<style type="text/css">
+    h2 {
+    margin-top: 0;
+}
+
+.viewport {
+    -webkit-perspective: 1600px;/*mostly like z zoom in and out, greater the px the farther away*/
+    -webkit-perspective-origin: 50% 200px;/*angling*/
+    -webkit-transform: scale(0.75,0.75);
+    -moz-perspective: 1600px;
+    -moz-perspective-origin: 50% 200px;
+    -moz-transform: scale(0.75,0.75);
+    perspective: 1600px;
+    perspective-origin: 50% 200px;
+    transform: scale(0.75,0.75);
+}
+
+.cube {
+    position: relative;
+    margin: 0px auto 100px;/*space between other html contents. this margin is effecting all sides due to 3D*/
+    height: 1000px;
+    width: 1000px;/*set width to 100% and see cube travel around the screen*/
+    -webkit-transition: -webkit-transform 50ms linear;
+    -webkit-transform-style: preserve-3d;
+   -webkit-transform: rotateX(-10deg) rotateY(20deg);/*initial posting when page load. facing viewers, adjust x and y. once page loaded hit Esc to reposition straight */
+    -moz-transition: -moz-transform 50ms linear;
+    -moz-transform-style: preserve-3d;
+    -moz-transform: rotateX(-10deg) rotateY(20deg);
+    transition: transform 50ms linear;
+    transform-style: preserve-3d;
+    transform: rotateX(-10deg) rotateY(20deg);
+}
+
+.cube h2 {
+    color: #fff;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.cube a {
+    /*color: #fff;*/
+    color: #439cbd;
+    
+}
+
+.cube > div {
+    position: absolute;
+    height: 1000px;
+    width: 1000px;
+    /*padding settings based on bube size and face size, here the face is 40px less than cube size,
+, so padding is 20px around all 4 sides of face. tweak it and see*/  
+    padding: 0px;
+    background-color: rgba(50, 50, 50, 0.80);
+    font-size: 1em;
+    line-height: 1em;
+    color: #fdd144;
+   border: 1px solid #555;
+  
+    border-radius: 3px;
+}
+
+.cube > div:first-child  {
+-webkit-transform: rotateX(90deg) translateZ(500px);/*half size of the cube*/
+    -moz-transform: rotateX(90deg) translateZ(500px);
+    transform: rotateX(90deg) translateZ(500px);
+}
+
+.cube > div:nth-child(2) {
+    -webkit-transform: translateZ(500px);
+    -moz-transform: translateZ(500px);
+    transform: translateZ(500px);
+}
+
+.cube > div:nth-child(3) {
+    -webkit-transform: rotateY(90deg) translateZ(500px);
+    -moz-transform: rotateY(90deg) translateZ(500px);
+    transform: rotateY(90deg) translateZ(500px);
+    text-align: center;
+}
+
+.cube > div:nth-child(4) {
+    -webkit-transform: rotateY(180deg) translateZ(500px);
+    -moz-transform: rotateY(180deg) translateZ(500px);
+    transform: rotateY(180deg) translateZ(500px);
+}
+
+.cube > div:nth-child(5) {
+    -webkit-transform: rotateY(-90deg) translateZ(500px);
+    -moz-transform: rotateY(-90deg) translateZ(500px);
+    transform: rotateY(-90deg) translateZ(500px);
+}
+
+.cube > div:nth-child(5) p {
+    text-align: center;
+    font-size: 1em;
+    margin: 40px;
+    line-height: 10px;
+}
+
+.cube > div:nth-child(6) {
+    -webkit-transform: rotateX(-90deg) rotate(180deg) translateZ(500px);
+    -moz-transform: rotateX(-90deg) rotate(180deg) translateZ(500px);
+    transform: rotateX(-90deg) rotate(180deg) translateZ(500px);
+}
+
+object {
+    opacity: 0.5;
+}
+
+object:hover {
+    opacity: 1;
+}
+  
+</style>
+ /*3D cubes for Hangar css ends here. css named touch*/ 
+        
+        
+  /*login regular css here. place code block anywhere below eyebrow btn groups css*/
+div.container{
+width: 700px;
+height: 180px;
+margin: 2px auto;
+
+font-family: monospace;
+background-color: #e3e3e3;
+opacity: 0.8;
+}
+
+div.main{
+width: 300px;
+padding: 10px 50px 25px;
+border-radius: 10px;
+font-family: monospace;
+float: center;
+margin-right: 80px;
+}
+
+label{
+color: #3e9cbf;
+/*text-shadow: 0 1px 0 #fff;*/
+font-size: 15px;
+font-weight: bold;
+}
+center{
+font-size:32px;
+}
+.note{
+color:red;
+}
+.valid{
+color:#3e9cbf;
+}
+.back{
+text-decoration: none;
+border: 1px solid rgb(0, 143, 255);
+background-color: rgb(0, 214, 255);
+padding: 3px 20px;
+border-radius: 2px;
+color: black;
+}
+
+input.lgsubm
+{
+    margin-left: 0px;
+}
+
+p.lgpara
+{
+    margin-left: 50px;
+    color: #fdd143;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+
+div.logincreditdiv
+{
+   
+   margin-top: 500px;
+    position: relative;
+    bottom: 0px;
+  
+    
+}
+
+p.logincreditp
+
+{
+    font-family: monospace;
+    color: white;
+ 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+            
+/*longin regular css ends*/
+
