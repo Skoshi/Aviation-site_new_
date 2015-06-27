@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<!--screen shots from F4BMS flight simulation. Please visit http://http://www.bmsforum.org-->
+		<title>Login_Spike Final Project June 2015 DaVinci Coders javaScript</title>
+		<meta name="F16 load out content=">
+		<meta name="author" content="HTsao">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+		<link href="css/GlassPitstylesheet.css" rel="stylesheet" type="text/css" />
+        <script src="resources/jssheets/justgage.1.0.1_no alert message.js"></script><!--link to justGage .js file-->  
+         <script src="resources/jssheets/jquery-2.1.4.js"></script><!--for jQuery-->
+         <script src="resources/jssheets/jquery-ui 1.11.4.js"></script><!--for jQuery UI library on this pc-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"type="text/javascript"></script><!--for link to jQuery UI external library-->
+
+         <script src="resources/jssheets/spikesheet05202015.js"></script><!--link to spikesheet05202015.js file. keep this syntax underneath justGauge's js links -->
+     
+     
+   
+	</head>
+
+	<body class="loginform" style="display: none;"><!--use inline style display: none; in order to work on firefox-->
+	    <div id="Outer_wrapper"><!--wrap entire page-->
+	         <table id="patch_table" width="100%" align="center">
+
+     <tr><td>
+    <h3 id="fortyeight_h3">48TH FT SQ<br><img id="imgtest" src="img/patch_1.png" /><br>THE SOUND OF FREEDOM</h3>
+
+  </td></tr>
+ </table>
+        </div>
+<div id="loginmenu" class="loginmenu_class">
+    <ul id="loginul_nav" style="text-align: left; margin-left: 42px">
+        <li id="btnLogin" class="loginli_class" style="margin-left: 3px"><a a class="linkstyle_white" href="Index.html">Login</a></li>
+        <li id="btnRegister" class="loginli_class" style=""><a a class="linkstyle_white" href="Register.html">Register</a></li>
+        <li id="btnContactus" class="loginli_class" style=""><a a class="linkstyle_white" href="mailto:piggy8pie@comcast.net">Contact Us</a></li>
+    </ul>
+    
+</div>
+	        
+	        <!--top message board table starting here-->
+<table id="eyebrow_messageboard">
+    <tr id="eyebrow_messagerow" class="class_blue">
+        
+         <td id="ejection_signtd"><a title="EOD Warrior Foundation" href="http://www.eodwarriorfoundation.org/" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png" /></a></td>
+         <td id="eyebrow_td_1" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><input id="airbasebut" class="eyebrowbtns" type="button" value="HOME AIR BASE"/></P></td>
+         <td id="eyebrow_td_2" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><input id="hangarbut" class="eyebrowbtns" type="button" value="HANGAR"/></P></td>
+         <td id="eyebrow_td_middle"><p id="eyebrow_parap_login" class="eyebrow_paraclass"></p>Member Login</td>
+        <td id="eyebrow_td_3" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><input id="powerplantbut" class="eyebrowbtns" type="button" value="POWER PLANT"/></P></td>
+        <td id="eyebrow_td_4" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><input id="pilotsclubbut" class="eyebrowbtns" type="button" value="PILOTS CLUB"/></P></td>
+       <td id="ejection_signtd" width="60px"><a title="USAF Honoring All Fallen Members" href="https://www.odmp.org/agency/3942-united-states-air-force-security-forces-us-government" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png" /></a></td>
+ 
+    </tr>
+    
+</table><!--top message board table ends here-->
+
+
+	</div><!--wrap entire page ends-->
+	
+	
+    </div><!--Outer_wrapper entire page ends-->
+    
+    
+    <div class="container" align="center">
+<div class="main" align="center">
+
+<form id="form_id" method="post" name="myform" style="float: right">
+<label>User Name :</label>
+<input type="text" name="username" id="username" size="25px" style="margin-right: 20px"/><br>
+<label>Password :</label>
+<input type="password" name="password" id="password" size="25px" style="margin-right: 11px"/><br>
+<input type="button" value="Login" id="submit" class="lgsubm" onclick="validate()"/>
+</form><br><br><br><br>
+<p align="center" class="lgpara">For demo please use following username and password. <br/><b class="valid">User Name: DaVinci
+    &nbsp;&nbsp;&nbsp;&nbsp;Password: password</b></p>
+</div>
+</div>
+<div class="logincreditdiv">
+<p id="logincredit" class="logincreditp">
+        Area 88 photo source:<a class="linkstyle_white" href="http://www.shogakukan.co.jp/" target="_blank">Shogakukan</a>
+    </p>
+
+</div>
+
+	</body>
+
+    
+</html>
