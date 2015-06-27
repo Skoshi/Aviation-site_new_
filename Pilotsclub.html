@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		
+
+		<title>Pilotsclub_Spike Final Project June 2015 DaVinci Coders javaScript</title>
+		<meta name="description" content="Glasspit, Glass Cockpit, justGauge.com">
+		<meta name="author" content="HTsao">
+        
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+      <link href="css/GlassPitstylesheet.css" rel="stylesheet" type="text/css" />
+     
+        
+       <script src="resources/jssheets/raphael.2.1.0.min.js"></script><!--link to justGage .js file-->
+        <script src="resources/jssheets/justgage.1.0.1_no alert message.js"></script><!--link to justGage .js main file. use this one because modified main file to remove missing gauge alert, make sure not to include the mini one-->  
+         <script src="resources/jssheets/jquery-2.1.4.js"></script><!--for jQuery-->
+         <script src="resources/jssheets/jquery-ui 1.11.4.js"></script><!--for jQuery UI library on this pc-->
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"type="text/javascript"></script><!--for link to jQuery UI external library-->
+        <script type="text/javascript" charset="utf-8" src="resources/jssheets/jquery.tubular.1.0.js"></script><!--for Tubular-->
+         <script type="text/javascript" charset="utf-8" src="resources/jssheets/index.js"></script><!--for Tubular-->
+
+         <script src="resources/jssheets/spikesheet05202015.js"></script><!--link to spikesheet05202015.js file. keep this syntax underneath justGauge's js links -->
+        <script type="text/javascript">
+        
+        
+        </script>
+		
+		
+	</head>
+	
+
+<body class="pclub" style="display: none;"><!--use inline style display: none; in order to work on firefox-->
+    <div id="Outer_wrapper"><!--wrap entire page-->
+    <!--set all table fixed width to prevent resizing issues. have to use inline width syntax, otherwise, it won't work-->
+    <div id="wrapper" class="clearfix"><!--Tubular wrapper starts--->
+<table id="patch_table">
+     <tr><td>
+     <h3 id="fortyeight_h3">48TH FT SQ<br><a class="no_blank" href="Homeairbase.html" ><img id="imgtest" src="img/patch_1.png" /></a><br>THE SOUND OF FREEDOM</h3>
+ </td></tr>
+ </table>
+  <p id="video-controls" class="black-65-2">Video controls:<br /><a href="#" class="tubular-play">Play</a> | <a href="#" class="tubular-pause">Pause</a> | <a href="#" class="tubular-volume-up">Volume Up</a> | <a href="#" class="tubular-volume-down">Volume Down</a> | <a href="#" class="tubular-mute">Mute</a></p><!--Tubular controler by itself here-->
+     
+ 
+<!--top message board table starting here-->
+    <table id="eyebrow_messageboard">
+    <tr id="eyebrow_messagerow" class="class_blue">
+        
+         <td id="ejection_signtd"><a title="EOD Warrior Foundation" href="http://www.eodwarriorfoundation.org/" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png" /></a></td>
+         <td id="eyebrow_td_1" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Homeairbase.html" ><input id="airbasebut" class="eyebrowbtns" type="button" value="HOME AIR BASE"/></a></P></td>
+         <td id="eyebrow_td_2" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Hangar.html"><input id="hangarbut" class="eyebrowbtns" type="button" value="HANGAR"/></a></P></td>
+         <td id="eyebrow_td_middle"><p id="eyebrow_parap" class="eyebrow_paraclass"></p></td>
+         <td id="eyebrow_td_3" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="powerplant.html"><input id="powerplantbut" class="eyebrowbtns" type="button" value="POWER PLANT"/></a></P></td>
+         <td id="eyebrow_td_4" class="greybackgroundc" ><p id="eyebrow_iconbase" align="center"><a class="no_blank" href="Pilotsclub.html"><input id="pilotsclubbut" class="eyebrowbtns" type="button" value="PILOTS CLUB"/></a></P></td>
+         <td id="ejection_signtd" width="60px"><a title="USAF Honoring All Fallen Members" href="https://www.odmp.org/agency/3942-united-states-air-force-security-forces-us-government" target="_blank"><img id="ejection_sign_img" alt="Ejection Sign" src="img/ejection seat sign.png"/></a></td>
+    </tr>
+    
+</table><!--top message board table ends here-->
+
+
+     <table id="pilotsclue_paratable" class="subtitletb">
+       <tr class="subtitletb"><td class="subtitletb">
+    <p id="pilotsclub_h3" class="subtitlep">PILOT'S CLUB</p>
+     </td></tr>
+   </table> 
+	
+<!--main monitor table starts here--keep width fixed px for better resize with all other tables -->	    
+<table id="pclubmain_monitortable" width="1350px" align="center" height="450px" border="0">
+		    <tr id="pclubmain_monitortr" class="">
+		        <td id="pclubmonitor_left1" class="pilotsclubyt"><p id="pclubmfdL1" class="mfdlclass" ><iframe class="pilotsclub" src="https://www.youtube.com/embed/nSkSz3egxMQ" allowfullscreen></iframe><br/>
+		        <iframe class="pilotsclub" src="https://www.youtube.com/embed/L9Wj8aF_qfU" frameborder="0" allowfullscreen></iframe>  
+		        </p></td>
+		        <td id="pclubmonitor_left2" class="pilotsclubyt"><p id="pclubmfdL2" class="mfdrclass"><iframe class="pilotsclub" src="https://www.youtube.com/embed/_8EkmyoG83Q" allowfullscreen><p>Your browser does not support iframes.</p></iframe>
+		         <iframe class="pilotsclub" src="https://www.youtube.com/embed/3gOW0S1jLNU" allowfullscreen></iframe>   
+		        </p></td>
+		        <td id="pclubmonitor_right2" class="pilotsclubyt"><p align="center" id="pclubmfdR2" class="mfdrclass">
+		          <iframe class="pilotsclub" src="https://www.youtube.com/embed/xXuutxEHGSk"  allowfullscreen></iframe>
+		         <iframe class="pilotsclub" src="https://www.youtube.com/embed/5A-9b7g4TFs"  allowfullscreen></iframe>   
+		        </p></td>
+		        <td id="pclubmonitor_right1" class="pilotsclubyt"><p align="center" id="pclubmfdR1" class="mfdrclass">
+                <iframe class="pilotsclub" src="https://www.youtube.com/embed/tfb2L-blz4Y"  allowfullscreen></iframe>
+		         <iframe class="pilotsclub" src="https://www.youtube.com/embed/8d6XcnCB5R0" allowfullscreen></iframe>
+		        </p></td>
+		    </tr>
+</table><!--main monitor table ends here-->
+
+<!--center btn group one table starts here-->
+<table id="center_btngroup_one" align="center">
+    <tr id="center_btngroup_one_btntr" class="">
+                <td id="center_btngroup_one_btntd" >
+                 <button id="mainpower_on_btn" class="" type="button" >MAIN PWR ON</button>
+                <button id="power_on_mfdL"  class="mfdpowerbtns" type="button" onclick="" align="center">L MFD POWER ON</button>
+                <button id="power_off_mfdL" class="mfdpowerbtns" type="button">L MFD POWER OFF</button>
+                <button id="power_off_mfdR" class="mfdpowerbtns" type="button" onclick="">R MFD POWER OFF</button>
+                <button id="power_on_mfdR"  class="mfdpowerbtns" type="button">R MFD POWER ON</button>
+                <button id="mainpower_off_btn" type="button">MAIN PWR OFF</button>
+                </td></tr>
+</table><!--center btn group one table ends here-->
+
+
+
+
+<!--lower central monitor table starts here-->
+<table id="pclublower_center_table" width="1350px" height="450px">
+            <tr id="pclublower_center_tabletr" class="">
+       <!--Yeager--><td id="pclublower_Lefttd"><p id="pclublower_Leftpara" style="vertical-align: top"><a href="http://www.chuckyeager.com/" target="_blank"><img style="vertical-align: top" src="img/chuckYeager_resized.png" width="125px" height="155px"/></a>
+           <a href="http://amzn.com/0553256742 " target="_blank"><img class="smallicons" alt="Amazon logo" src="img/amazon-icon7.png"/></a>
+           <a href="https://youtu.be/6BDgQwlfHII" target="_blank"><img class="smallicons" alt="Youtube logo" src="img/youtube.png" /></a>
+           <a href="https://www.facebook.com/pages/Chuck-Yeager/465193060493" target="_blank"><img class="smallicons" alt="facebook logo" src="img/facebook_icon.png" /></a>
+           <a href="https://twitter.com/genchuckyeager" target="_blank"><img class="smallicons" alt="twitter logo" src="img/twitter.png" /></a><br>
+           Chuck Yeager: The greatest dog fighter and test pilot in history, hired by Northrop in retirement to evaluate the F-20 Tigershark. Chuck was the first person to break the sound barrier and this book tells 
+           the story of his life and accomplishments.
+           
+           </p></td>
+                 
+                 <td id="pclublower_center_monitortd" width="80%" align="center">
+                   <div id="pclublower_center_monitordiv" style="padding: 0; margin: 0">
+       <!--Rosey--><div id="pclublowerdiv2_1" class="pilotsshelfgray"><p id="pclublower_centerpara" class="bookstyle"><a href="http://www.vipersinthestorm.com/html/main_page.html" target="_blank"><img alt="Vipers In The Stornm book cover" align="left" src="img/vipers_inthestorm resized.jpg" width="100" height="148" style="text-overflow: left"/></a>
+                   Vipers In The Storm: Diary of a Gulf War Fighter Pilot by Keith Rosenkranz.<br>&nbsp;&nbsp;This is a must read book for aviation enthusiasts. United States Air Force Captain Keith Rosenkranz call sign "Rosey", piloted his F-16 &nbsp;&nbsp;(nicknamed the "Viper") in&nbsp;thiry combat 
+                    missions. Despite the fact that F-16 was an air superiority fighter, it was mainly used as an &nbsp;&nbsp;ground superiority fighter during Operation Desert Storm. Rosey and his squadron flew the F-16 Block 40 equipped with <a class="linkstyle" href="http://en.wikipedia.org/wiki/LANTIRN" target="_blank">LANTIRN</a> &nbsp;&nbsp;(Low Altitude Navigation and Targeting Infrared for Night) pod
+                    demonstrated how deadly those Vipers were during the night missions.<br> &nbsp;&nbsp;Don't miss this great book if you are a F-16 buff!<br>
+                    &nbsp;&nbsp;<a href=" http://amzn.com/0071400400" target="_blank"><img style="margin-left: 3px" align="left" alt="Amazon logo" src="img/amazon-icon7.png" width="28px" height="28px"/></a>
+                    <a href="https://youtu.be/Lh5OfeCMMxs" target="_blank"><img align="left" alt="youtubelogo" src="img/youtube-icon2.png" width="28px" height="28px"/></a>
+                    <a href="https://www.facebook.com/pages/Vipers-In-The-Storm-Keith-Rosenkranz/249124160482" target="_blank"><img align="left" alt="facebook logo" src="img/facebook_icon.png" width="28px" height="28px"/></a>
+                    </p>  
+                   </div>    
+    <!--BudAnderson--><div id="pclublowerdiv2_2" class="pilotsshelforange"><p id="pclublower_centerpara" class="bookstyle"><a href="http://www.cebudanderson.com/" target="_blank"><img align="left" alt="To Flight And Fight logo" src="img/toFlyandFight.png" width="100px" height="148px"/></a>
+                      To Fly and Fight: Memoirs of a Triple Ace by Clarence E. "Bud" Anderson and Joseph P. Hamelin<br>
+                      &nbsp;&nbsp;Bud Anderson earned "triple ace" status in WWII by flying P-51 Mustang against the Luftwaffe in Europe. His P-51, nicknamed Old &nbsp;&nbsp;Crow, is one of the most well-known planes in WWII history.
+                      Bud and Chuck Yeager both served in the 357th Fighter Group that &nbsp;&nbsp;knocked out the formidable Luftwaffe. Bud later became a Wing Commander in 
+                      Vietnam.  This book describes how Bud advanced his &nbsp;&nbsp;flying career and become one of the most respected American airmen in history.<br>
+                      &nbsp;&nbsp;<a href="http://amzn.com/0553292404 " target="_blank"><img style="margin-left: 3px" align="left" alt="Amazon logo" src="img/amazon-icon7.png" width="28px" height="28px"/></a>
+                    <a href="https://youtu.be/l8PqNZODV_o" target="_blank"><img align="left" alt="youtubelogo" src="img/youtube-icon2.png" width="28px" height="28px"/></a>
+                    <a href="https://www.facebook.com/pages/CE-Bud-Anderson/176714249091651" target="_blank"><img align="left" alt="facebook logo" src="img/facebook_icon.png" width="28px" height="28px"/></a>
+           
+                     </p></div>    
+                    
+        
+    <!--A Higher Call--><div id="pclublowerdiv2_3" class="pilotsshelflightblue"><p id="pclublower_centerpara" class="bookstyle"><a href="http://www.valorstudios.com/a-higher-call-book.htm" target="_blank"><img align="left" src="img/A_highercall_resized.png" width="100px" height="148px"/></a>
+                      A Higher Call: An Incredible True Story of Combat and Chivalry in the War-Torn Skies of WWII by Adam Makos and Larry Alexander<br>
+                      &nbsp;&nbsp;A Higher Call is the incredible true story of American bomber pilot Charlie Brown and German fighter pilot Franz Stigler. They first 
+                      &nbsp;&nbsp;encountered each other in the air as enemies. Charlie's crew had been badly wounded in combat and his B-17 was heavily damaged. &nbsp;&nbsp;Franz could have
+                      finised them off, but instead the Catholic-rasied Luftwaffe fighter pilot made a decision to spare their lives. 
+                      This is a &nbsp;&nbsp;must read book for all aviation fans.<br>
+                      &nbsp;&nbsp;<a href="http://amzn.com/0425255735 " target="_blank"><img style="margin-left: 3px" align="left" alt="Amazon logo" src="img/amazon-icon7.png" width="28px" height="28px"/></a>
+                    <a href="https://youtu.be/RkVc5o1UXAA" target="_blank"><img align="left" alt="youtubelogo" src="img/youtube-icon2.png" width="28px" height="28px"/></a>
+                    <a href="https://www.facebook.com/pages/Adam-Makos/382380358539429" target="_blank"><img align="left" alt="facebook logo" src="img/facebook_icon.png" width="28px" height="28px"/></a>
+           
+                     </p></div>    
+                </div>
+                </td>
+                
+      <!--Viperpilot--><td id="pclublower_Righttd" width="10%" style="vertical-align: top"><p id="pclublower_Rightpara" class="" style="vertical-align: top"><a href="http://www.danhampton.org/index.htm" target="_blank"><img align="center" src="img/Viperpilot.png" width="125px" height="155px"/></a>
+                    <a href="http://amzn.com/006213034X " target="_blank"><img class="smallicons" alt="Amazon logo" src="img/amazon-icon7.png" /></a>
+                    <a href="https://youtu.be/3BYLrZUWFQ8" target="_blank"><img class="smallicons" alt="Youtube logo" src="img/youtube.png" /></a>
+                    <a href="https://www.facebook.com/DanHamptonAuthor" target="_blank"><img class="smallicons" alt="facebook logo" src="img/facebook_icon.png" /></a><br>
+                    Dan Hampton was a USAF "Wild Weasel" pilot. He and his squadron risked their lives during combat to clear a path for planned air strikes by luring the enemy to activate their surface to air defense system. 
+                    Read this book to learn how our best trained F-16 pilots dominate the enemy.
+                 
+                 </p></td>
+            </tr>
+</table><!--lower center table ends here-->
+
+<!--Tubular div starts here-->
+
+    <div id="main">
+       
+        <p id="video-controls" class="black-65">Video controls:<br /><a href="#" class="tubular-play">Play</a> | <a href="#" class="tubular-pause">Pause</a> | <a href="#" class="tubular-volume-up">Volume Up</a> | <a href="#" class="tubular-volume-down">Volume Down</a> | <a href="#" class="tubular-mute">Mute</a></p>
+        <div class="black-50">
+            <h1>jQuery tubular</h1>
+            <p>Tubular is a jQuery plugin that lets you set a YouTube video as your page background.  Just attach it to your page wrapper element, set some options, and you're on your way.</p>
+            <p><code>$(<em>page content wrapper element</em>).tubular(<em>options</em>);</code></p>
+        </div>
+        <div class="black-50">
+            <h2>Tubular's <em>hello, world</em></h2>
+            <p>Assuming you're happy with the default options and you use a wrapper div with the id of <em>wrapper</em>, you simply attach to your wrapper div and specify the video you want to load:</p>
+            <p><code>$('#wrapper').tubular({videoId: '0Bmhjf0rKe8'});</code></p>
+            <p>and <em>Presto!</em> ... kittens in your website background!</p>
+        </div>
+        <div class="black-50">
+            <h2>A word of caution</h2>
+            <p>Tubular does not design your website for you. It works here thanks to alpha transparency on these gray boxes and the png logo on the top left. I built tubular thinking it would help experienced web designers and developers add some subtle background elements &mdash; emphasis on subtle &mdash; to their work. I'm sure there are some tasteful ways to use tubular and many, many more not so tasteful ways to use it. With great power comes great responsibility. The kitten example above is not to be taken seriously! :-)</p>
+        </div>
+        <div class="black-50">
+            <h2>Options and defaults</h2>
+            <code>
+                <ul>
+                    <li>ratio: 16/9 // usually either 4/3 or 16/9 -- tweak as needed</li>
+                    <li>videoId: 'ZCAnLxRvNNc' // toy robot in space is a good default, no?</li>
+                    <li>mute: true</li>
+                    <li>repeat: true</li>
+                    <li>width: $(window).width() // no need to override</li>
+                    <li>wrapperZIndex: 99</li>
+                    <li>playButtonClass: 'tubular-play'</li>
+                    <li>pauseButtonClass: 'tubular-pause'</li>
+                    <li>muteButtonClass: 'tubular-mute'</li>
+                    <li>volumeUpClass: 'tubular-volume-up'</li>
+                    <li>volumeDownClass: 'tubular-volume-down'</li>
+                    <li>increaseVolumeBy: 10 // increment value; volume range is 1-100</li>
+                    <li>start: 0 // starting position in seconds</li>
+                </ul>
+            </code>
+        </div>
+    </div>
+    <div id="sidebar">
+        <div class="black-50">
+            <h2>Download</h2>
+            <p><a href="http://code.google.com/p/jquery-tubular/">Download jQuery tubular on Google Code</a></p>
+        </div>
+        <div class="black-50">
+            <h2>Credits</h2>
+            <p>Beautiful time lapse video of the U.S. Southwest by Tom Lowe and Catherine Laplace-Builhe. <a href="http://www.youtube.com/watch?v=e4Is32W-ppk">Original video here</a>. Code by <a href="http://seanmccambridge.com">Sean McCambridge</a>. Released under <a href="http://opensource.org/licenses/mit-license.php">the MIT License</a>.</p>
+        </div>
+        <div class="black-50">
+            <h2>Remember</h2>
+            <p>Tubular does one thing well. It takes a single video from YouTube at injects it as a full-screen background on a website. It scales the video, offsets the video and provides some basic controls for the video.  That's it.</p>
+            <p>Tubular makes some assumptions on how your website works. First, it assumes you have a single wrapper element under the body tag that envelops all of your website content. It promotes that wrapper to z-index: 99 and position: relative. You can configure the z-index value in the options. So it's assuming your wrapper can accept positioning without breaking your site.</p>
+            <p>Finally, tubular injects the YouTube video you specified as an iframe using fixed position at z-index: 1.  Browsers that do not support fixed positioning will not support tubular. Also, since the YouTube iframe API requires the HTML5 postMessage feature, browsers that do not support it (I'm looking at you, IE7) will not support tubular &mdash; tubular will return false before any changes are made to your CSS in IE7.</p>
+        </div>
+    </div>
+</div><!-- Tubular #wrapper , Tubular div ends -->
+ </div><!--Outer_wrapper entire page ends here-->
+  
+	</body>
+	
+</html>
